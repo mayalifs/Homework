@@ -1,23 +1,30 @@
 
-h1{
+
+h1, h2, h3{
     color: white;
     font-family: Thonburi;
-    font-size: 75px;
+    /*font-size: 75px 25px 35px;*/
     text-align: center;
+}
+h1{
+    /*color: white;*/
+    /*font-family: Thonburi;*/
+    font-size: 75px;
+    /*text-align: center;*/
 }
 
 h2{
-    color: white;
-    font-family: Thonburi;
+    /*color: white;*/
+    /*font-family: Thonburi;*/
     font-size: 25px;
-    text-align: center;
+    /*text-align: center;*/
 }
 
 h3{
-    color: white;
-    font-family: Thonburi;
+    /*color: white;*/
+    /*font-family: Thonburi;*/
     font-size: 35px;
-    text-align: center;
+    /*text-align: center;*/
 }
 
 .buttons{
@@ -41,11 +48,11 @@ nav{
 
 /*****************SignIN******************/
 
-.container {
-    color: white;
-    font-family: Thonburi;
-    font-size: 15px;
-}
+/*.container {*/
+/*    color: white;*/
+/*    font-family: Thonburi;*/
+/*    font-size: 15px;*/
+/*}*/
 
 
 /* Bordered form */
@@ -61,20 +68,20 @@ input[type=text], input[type=password] {
   display: inline-block;
   border: 1px solid #ccc;
   box-sizing: border-box;
-
+    border-radius: 15px;
 }
 
-/* Set a style for all buttons */
-button {
-  background-color: #04AA6D;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
+/*!* Set a style for all buttons *!*/
+/*button {*/
+/*  background-color: #04AA6D;*/
+/*  color: white;*/
+/*  padding: 14px 20px;*/
+/*  margin: 8px 0;*/
+/*  border: none;*/
+/*  cursor: pointer;*/
+/*  width: 100%;*/
 
-}
+/*}*/
 
 /* Add a hover effect for buttons */
 /*button:hover {*/
@@ -89,16 +96,16 @@ button {
 /*}*/
 
 
-/* Add padding to containers */
-.container1 {
-    padding: 10px;
-}
+/* !*Add padding to containers *!*/
+/*.container1 {*/
+/*    padding: 10px;*/
+/*}*/
 
-/* The "Forgot password" text */
-span.psw {
-  float: right;
-  padding-top: 16px;
-}
+/*!* The "Forgot password" text *!*/
+/*span.psw {*/
+/*  float: right;*/
+/*  padding-top: 16px;*/
+/*}*/
 
 /* Change styles for span and cancel button on extra small screens */
 /*@media screen and (max-width: 300px) {*/
@@ -115,16 +122,16 @@ span.psw {
 
 * {box-sizing: border-box}
 
-/* Full-width input fields */
-  input[type=text], input[type=password] {
-      width: 100%;
-      padding: 15px;
-      margin: 5px 0 22px 0;
-      display: inline-block;
-      border: none;
-      background: white;
-      border-radius: 15px;
-}
+/*!* Full-width input fields *!*/
+/*  input[type=text], input[type=password] {*/
+/*      width: 100%;*/
+/*      padding: 15px;*/
+/*      margin: 5px 0 22px 0;*/
+/*      display: inline-block;*/
+/*      border: none;*/
+/*      background: white;*/
+/*      border-radius: 15px;*/
+/*}*/
 
 input[type=text]:focus, input[type=password]:focus {
       background-color: white;
@@ -149,22 +156,25 @@ button {
     border-radius: 15px;
 }
 
-button:hover {
-     opacity:1;
-}
+
+/*button:hover {*/
+/*     opacity:1;*/
+/*}*/
 
 /* Extra styles for the cancel button */
-.cancelbtn {
-      padding: 14px 20px;
-      background-color: white;
-    color: black;
-    border-radius: 15px;
-}
+/*.cancelbtn {*/
+/*      padding: 14px 20px;*/
+/*      background-color: white;*/
+/*    color: black;*/
+/*    border-radius: 15px;*/
+/*}*/
 
 /* Float cancel and signup buttons and add an equal width */
 .cancelbtn, .signupbtn {
     float: left;
     width: 25%;
+    margin-left: 100px;
+    margin-right: 100px;
 }
 
 /* Add padding to container elements */
@@ -208,6 +218,7 @@ button:hover {
     float: left;
     height: 46px;
     padding: 0 10px;
+    position: relative;
 }
 
 .rate:not(:checked) > input {
@@ -246,7 +257,16 @@ button:hover {
     margin-left: 500px;
 }
 
-.Rate{
+
+div.Rate{
     color: white;
     font-family: Thonburi;
+    position: absolute;
+    right: 0;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: 100px;
+    margin-left: 100px;
+
 }
+
