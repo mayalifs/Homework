@@ -7,12 +7,15 @@
 </head>
 <body>
 
-<div class="container1">
-    <nav>
-        <a href="http://localhost:63342/Homework/HomePage.html?_ijt=d1mn9ui4bdcpm52pmul3ut35u5&_ij_reload=RELOAD_ON_SAVE" >Home Page</a>
-        <a href="a4">Restaurants/Coffe Shops</a>
-        <a href="http://localhost:63342/Homework/SignInPage.html?_ijt=d1mn9ui4bdcpm52pmul3ut35u5&_ij_reload=RELOAD_ON_SAVE" >Sign In</a>
-        <a href="http://localhost:63342/Homework/SignUpPage.html?_ijt=s71hee3hau451ab471u9cocri1&_ij_reload=RELOAD_ON_SAVE">Sign Up</a>
+<div class="menu">
+     <nav>
+        <ul>
+        <li><a href="HomePage.html" >Home Page</a></li>
+        <li><a href="FindPlacePage.html" >Where to eat</a></li>
+        <li><a href="RestaurantCoffePage.html">Restaurants/Coffe Shops</a></li>
+        <li><a href="SignInPage.html" >Sign In</a></li>
+        <li><a href="SignUpPage.html">Sign Up</a></li>
+        </ul>
     </nav>
 </div>
 
@@ -39,19 +42,19 @@ body {
     <hr>
 
     <label for="fname"><b>Full Name</b></label>
-    <input type="text" placeholder="Enter full name" name="fnam" required>
+    <input class="input" type="text" placeholder="Enter full name" name="fnam" required>
 
      <label for="uname"><b>User Name</b></label>
-    <input type="text" placeholder="Enter user name" name="uname" required>
+    <input class="input" type="text" placeholder="Enter user name" name="uname" required>
 
     <label for="email"><b>Email</b></label>
-    <input type="text" placeholder="Enter Email" name="email" required>
+    <input class="input" type="text" placeholder="Enter Email" name="email" required>
 
     <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
+    <input class="input" type="password" placeholder="Enter Password" name="psw" required>
 
     <label for="psw-repeat"><b>Confirm Password</b></label>
-    <input type="password" placeholder="Confirm Password" name="psw-repeat" required>
+    <input class="input" type="password" placeholder="Confirm Password" name="psw-repeat" required>
 
 <!--    <label>-->
 <!--      <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me-->
@@ -61,6 +64,7 @@ body {
 
     <div class="clearfix">
       <button type="button" class="cancelbtn">Cancel</button>
+        <br>
       <button type="submit" class="signupbtn">Sign Up</button>
     </div>
   </div>
