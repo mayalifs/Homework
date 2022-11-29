@@ -1,359 +1,234 @@
-
+.body{
+	background-image: url('FoodBackround.jpg');
+	background-size: cover;
+	font-family: Thonburi;
+	color: lavender;
+}
 /*Location of the menu bar*/
-nav {
-    float: contour;
+nav
+{
+	float: contour;
+	text-align: center;
 }
 
 /*Design for the menu bar*/
-nav li {
-    font-family: Thonburi;
-    display: inline-block;
-    margin-left:30px;
-    padding-top: 5px;
-    position: relative;
+nav li
+{
+	display: inline-block;
+	margin-left:30px;
+	padding-top: 5px;
+	position: relative;
 }
 
 /*Design for the menu bar*/
-nav a {
-    color: white;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 12px;
-    padding: 10px;
+nav a
+{
+	color: white;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 12px;
+	padding: 10px;
+	/*text-align: center;*/
 }
 
 /*Color the href when mouse on it*/
-nav a:hover {
-    color: var(--black);
-    background-color:var(--headcolor);
-    border-radius: 4px;
+nav a:hover
+{
+	color: #303b37;
+	background-color:var(--headcolor);
+	border-radius: 4px;
 }
 
-
-h1, h2, h3, h4{
-    color: white;
-    font-family: Thonburi;
-    /*font-size: 75px 25px 35px;*/
-    text-align: center;
+.body h1, h2, h3, h4
+{
+	text-align: center;
 }
+
 /*VDine*/
-h1{
-    font-size: 75px;
+h1
+{
+	font-size: 75px;
 }
+
 /*Eat, Drink, Vegan Repeat*/
-h2{
-    font-size: 25px;
+h2
+{
+	font-size: 25px;
 }
+
 /*Here you will find the best vegan place around you*/
-h3{
-    font-size: 35px;
-    margin-top: 150px;
+h3
+{
+	font-size: 35px;
+	margin-top: 150px;
 }
+
 /*Sign In/Sign Up/Adding a new place*/
-h4{
-    font-size: 35px;
-    margin-top: 50px;
+h4
+{
+	font-size: 35px;
+	margin-top: 50px;
 }
 
-.buttons{
-    color: black;
-    background-color: white;
-    font-family: Thonburi;
-    font-size: 15px;
-    display: flex;
-    margin: auto;
-    cursor: pointer;
+
+.clearfix:hover{
+	color: black;
 }
 
-a{
-    color: white;
-    text-align: center;
-}
-
-nav{
-    text-align: center;
-}
 
 /*****************SignIN******************/
 
-/*.container {*/
-/*    color: white;*/
-/*    font-family: Thonburi;*/
-/*    font-size: 15px;*/
-/*}*/
 
-
-/* Bordered form */
-form {
-  border: 3px solid #f1f1f1;
+.input
+{
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	border-radius: 15px;
+	background-color: lavender;
 }
 
-/* Full-width inputs */
-input[type=text], input[type=password] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-    border-radius: 15px;
-}
-
-.input{
-      width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-    border-radius: 15px;
-}
-
-/*!* Set a style for all buttons *!*/
-/*button {*/
-/*  background-color: #04AA6D;*/
-/*  color: white;*/
-/*  padding: 14px 20px;*/
-/*  margin: 8px 0;*/
-/*  border: none;*/
-/*  cursor: pointer;*/
-/*  width: 100%;*/
-
-/*}*/
-
-/* Add a hover effect for buttons */
-/*button:hover {*/
-/*  opacity: 0.8;*/
-/*}*/
-
-/* Extra style for the cancel button (red) */
-/*.cancelbtn {*/
-/*  width: auto;*/
-/*  padding: 10px 18px;*/
-/*  background-color: #f44336;*/
-/*}*/
 
 
-/* !*Add padding to containers *!*/
-/*.container1 {*/
-/*    padding: 10px;*/
-/*}*/
 
-/*!* The "Forgot password" text *!*/
-/*span.psw {*/
-/*  float: right;*/
-/*  padding-top: 16px;*/
-/*}*/
-
-/* Change styles for span and cancel button on extra small screens */
-/*@media screen and (max-width: 300px) {*/
-/*  span.psw {*/
-/*    display: block;*/
-/*    float: none;*/
-/*  }*/
-/*  .cancelbtn {*/
-/*    width: 100%;*/
-/*  }*/
-/*}*/
 
 /*****************SignUp******************/
+*
+{
+box-sizing: border-box}
 
-* {box-sizing: border-box}
 
-/*!* Full-width input fields *!*/
-/*  input[type=text], input[type=password] {*/
-/*      width: 100%;*/
-/*      padding: 15px;*/
-/*      margin: 5px 0 22px 0;*/
-/*      display: inline-block;*/
-/*      border: none;*/
-/*      background: white;*/
-/*      border-radius: 15px;*/
-/*}*/
-
-/*input[type=text]:focus, input[type=password]:focus {*/
-/*      background-color: white;*/
-/*      outline: none;*/
-/*}*/
-
-hr {
-      border: 1px solid #f1f1f1;
-      margin-bottom: 25px;
+hr
+{
+	border: 1px solid #f1f1f1;
+	margin-bottom: 25px;
 }
 
 /* Set a style for all buttons */
-button {
-      background-color: white;
-      color: black;
-      padding: 14px 20px;
-      margin: 8px 0;
-      border: none;
-      cursor: pointer;
-      width: 100%;
-      opacity: 0.9;
-    border-radius: 15px;
+button
+{
+	background-color: lavender;
+	color: black;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+	opacity: 0.9;
+	border-radius: 15px;
+}
+
+button:hover
+{
+	opacity:1;
 }
 
 
-/*button:hover {*/
-/*     opacity:1;*/
-/*}*/
-
-/* Extra styles for the cancel button */
-/*.cancelbtn {*/
-/*      padding: 14px 20px;*/
-/*      background-color: white;*/
-/*    color: black;*/
-/*    border-radius: 15px;*/
-/*}*/
-
-/* Float cancel and signup buttons and add an equal width */
-/*.cancelbtn, .signupbtn {*/
-/*    float: left;*/
-/*    width: 25%;*/
-/*    margin-left: 100px;*/
-/*    margin-right: 100px;*/
-/*}*/
-
-/* Add padding to container elements */
-.container {
-    padding: 16px;
-    /*margin: 0 auto;*/
-    /*cursor: pointer;*/
-    margin-right: 350px;
-    margin-left: 350px;
-    color: white;
-    font-family: Thonburi;
-    /*width: 50%;*/
+form
+{
+	padding: 16px;
+	margin-right: 350px;
+	margin-left: 350px;
+	color: lavender;
+	font-family: Thonburi;
 }
 
 /* Clear floats */
-.clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
+.clearfix::after
+{
+	content: "";
+	clear: both;
+	display: table;
 }
 
-.clearfix{
-    margin-right: 250px;
-    margin-left: 250px;
+.clearfix
+{
+	color: lavender;
+	margin-right: 250px;
+	margin-left: 250px;
 }
 
 /* Change styles for cancel button and signup button on extra small screens */
-@media screen and (max-width: 300px) {
-  .cancelbtn, .signupbtn {
-    width: 100%;
-  }
+@media screen and (max-width: 300px)
+{
+	.cancelbtn, .signupbtn
+	{
+		width: 100%;
+	}
 }
-
 
 /*****************AddNewPlace******************/
 
 
 
 
+
 /*****************Rate******************/
-
-*{
-    margin: 5px;
-    padding: 0;
-}
-/*.rate {*/
-/*    float: left;*/
-/*    height: 46px;*/
-/*    padding: 0 10px;*/
-/*    position: relative;*/
-/*}*/
-
-/*.rate:not(:checked) > input {*/
-/*    position:absolute;*/
-/*    top:-9999px;*/
-/*}*/
-/*.rate:not(:checked) > label {*/
-/*    float:right;*/
-/*    width:1em;*/
-/*    overflow:hidden;*/
-/*    white-space:nowrap;*/
-/*    cursor:pointer;*/
-/*    font-size:30px;*/
-/*    color:#ccc;*/
-/*}*/
-/*.rate:not(:checked) > label:before {*/
-/*    content: '★ ';*/
-/*}*/
-/*.rate > input:checked ~ label {*/
-/*    color: #ffc700;*/
-/*}*/
-/*.rate:not(:checked) > label:hover,*/
-/*.rate:not(:checked) > label:hover ~ label {*/
-/*    color: #deb217;*/
-/*}*/
-/*.rate > input:checked + label:hover,*/
-/*.rate > input:checked + label:hover ~ label,*/
-/*.rate > input:checked ~ label:hover,*/
-/*.rate > input:checked ~ label:hover ~ label,*/
-/*.rate > label:hover ~ input:checked ~ label {*/
-/*    color: #c59b08;*/
-/*}*/
-
-.save{
-    margin-right: 800px;
-    margin-left: 450px;
-    /*margin-top: 200px   ;*/
+*
+{
+	margin: 5px;
+	padding: 0;
 }
 
 
-div.Rate{
-    /*color: white;*/
-    /*font-family: Thonburi;*/
-    /*position: absolute;*/
-    /*right: 0;*/
-    /*margin-top: 100px;*/
-    /*margin-bottom: 100px;*/
-    /*margin-right: 100px;*/
-    /*margin-left: 100px;*/
 
+
+.radioRate
+{
+	font-weight: bold;
 }
 
-div.radioRate{
-    padding: 16px;
-    margin-left: 750px;
-    color: white;
-    font-family: Thonburi;
+/*****************Restaurant/CoffePage******************/
+
+.places
+{
+	display: grid;
+	grid-template-columns: repeat(3, 350px);
+	align-items: center;
+	justify-content: space-around;
+	gap: 50px;
 }
 
-
-/*****************Restaurant/Coffe******************/
-
-.places{
-    display: grid;
-    grid-template-columns: repeat(3, 350px);
-    align-items: center;
-    justify-content: space-around;
-    gap: 50px;
+.item
+{
+	background-color: white;
+	color: black;
+	border: 1px solid balck(0, 0, 0, 0.5);
+	padding: 30px;
+	font-size: 16px;
+	text-align: center;
+	border-radius: 15px;
+	background-color: lavender;
 }
 
-.item{
-    background-color: white;
-    color: black;
-    border: 1px solid balck(0, 0, 0, 0.5);
-    padding: 30px;
-    font-size: 16px;
-    text-align: center;
-    border-radius: 15px;
-}
-.places a{
-    color: black;
+.places a
+{
+	color: black;
 }
 
-.time {
-    text-align: left;
+.time
+{
+	text-align: left;
 }
 
-.address {
-    text-align: center;
+.address
+{
+	text-align: center;
 }
 
-.phone {
-    text-align: center;
+.phone
+{
+	text-align: center;
+}
+
+/*****************RatePage******************/
+
+.option{
+	width: 25%;
+	padding: 12px 20px;
+	border-radius: 15px;
+	background-color: lavender;
 }

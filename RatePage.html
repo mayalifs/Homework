@@ -5,9 +5,9 @@
     <title>Title</title>
     <link rel="stylesheet" href="Project.css">
 </head>
-<body>
+<body class="body">
 
-<div class="menu">
+
     <nav>
         <ul>
         <li><a href="HomePage.html" >Home Page</a></li>
@@ -17,162 +17,85 @@
         <li><a href="SignUpPage.html">Sign Up</a></li>
         </ul>
     </nav>
-</div>
 
-<style>
-body {
-    background-image: url('FoodBackround.jpg');
-    background-size: cover;
-}
-</style>
 
 <div>
     <h1>VDine</h1>
-    <h2>Eat, Drink, Vegan Repeat</h2>
+    <h2>Eat, Drink, Vegan, Repeat</h2>
 </div>
 
 
 <!--***************************-->
 
-<!--<form action="action_page.php" style="border:0px solid #ccc">-->
-<!--  <div class="container">-->
-<!--    <h1>Adding a new place</h1>-->
-<!--    <p>Please fill in this form to add a new place :)</p>-->
-<!--    <hr>-->
-<!--      <div class="rate">-->
-<!--        <label>-->
-<!--          <input type="radio" checked="checked" name="remember" style="margin-bottom:15px"> Restaurant-->
-<!--          <input type="radio" checked="checked" name="remember" style="margin-bottom:15px"> Coffee shop-->
-<!--        </label>-->
-<!--      </div>-->
+<form>
+
+    <label for="rname"><b>Place</b></label><br>
+    <select class="option" name="rname" required>
+        <option value="anastasia">Anastasia</option>
+        <option value="meshek">Meshek Barzilay</option>
+        <option value="goddness">Goodness</option>
+    </select>
+
+
+    <div class="radioRate">
+  <p>Cleanliness</p>
+        <input type="radio" id="r1_star1" name="clean" value="1 Star">
+        <label for="r1_star1">1 Star</label>
+        <input type="radio" id="r1_star2" name="clean" value="2 Stars">
+        <label for="r1_star2">2 Stars</label>
+        <input type="radio" id="r1_star3" name="clean" value="3 Stars">
+        <label for="r1_star3">3 Stars</label>
+        <input type="radio" id="r1_star4" name="clean" value="4 Stars">
+        <label for="r1_star4">4 Stars</label>
+        <input type="radio" id="r1_star5" name="clean" value="5 Stars">
+        <label for="r1_star5">5 Stars</label>
+  <br>
+
+   <p>Food quality</p>
+        <input type="radio" id="r2_star1" name="FQuality" value="1 Star">
+        <label for="r1_star1">1 Star</label>
+        <input type="radio" id="r2_star2" name="FQuality" value="2 Stars">
+        <label for="r1_star2">2 Stars</label>
+        <input type="radio" id="r2_star3" name="FQuality" value="3 Stars">
+        <label for="r1_star3">3 Stars</label>
+        <input type="radio" id="r2_star4" name="FQuality" value="4 Stars">
+        <label for="r1_star4">4 Stars</label>
+        <input type="radio" id="r2_star5" name="FQuality" value="5 Stars">
+        <label for="r1_star5">5 Stars</label>
+<br>
+
+        <p>Service quality</p>
+        <input type="radio" id="r3_star1" name="SQquality" value="1 Star">
+        <label for="r1_star1">1 Star</label>
+        <input type="radio" id="r3_star2" name="SQquality" value="2 Stars">
+        <label for="r1_star2">2 Stars</label>
+        <input type="radio" id="r3_star3" name="SQquality" value="3 Stars">
+        <label for="r1_star3">3 Stars</label>
+        <input type="radio" id="r3_star4" name="SQquality" value="4 Stars">
+        <label for="r1_star4">4 Stars</label>
+        <input type="radio" id="r3_star5" name="SQquality" value="5 Stars">
+        <label for="r1_star5">5 Stars</label>
+  <br>
+
+   <p>Value for money</p>
+        <input type="radio" id="r4_star1" name="VForMoney" value="1 Star">
+        <label for="r1_star1">1 Star</label>
+        <input type="radio" id="r4_star2" name="VForMoney" value="2 Stars">
+        <label for="r1_star2">2 Stars</label>
+        <input type="radio" id="r4_star3" name="VForMoney" value="3 Stars">
+        <label for="r1_star3">3 Stars</label>
+        <input type="radio" id="r4_star4" name="VForMoney" value="4 Stars">
+        <label for="r1_star4">4 Stars</label>
+        <input type="radio" id="r4_star5" name="VForMoney" value="5 Stars">
+        <label for="r1_star5">5 Stars</label>
+  <br>
+</div>
 
 
 
-<!--    <div class="clearfix">-->
-<!--      <button type="button" class="add">Add</button>-->
-
-<!--    </div>-->
-<!--  </div>-->
-<!--</form>-->
-
-<form action="action_page.php" style="border:0px solid #ccc">
-<!--    <div class="Rate">-->
-<!--    <label for="clean"><b>Cleanliness</b></label>-->
-<!--    <br>-->
-<!--        <div class="rate">-->
-<!--            <input type="radio" id="r1_star5" name="rate" value="5" />-->
-<!--            <label for="r1_star5" title="text">5</label>-->
-<!--            <input type="radio" id="r1_star4" name="rate" value="4" />-->
-<!--            <label for="r1_star4" title="text">4</label>-->
-<!--            <input type="radio" id="r1_star3" name="rate" value="3" />-->
-<!--            <label for="r1_star3" title="text">3</label>-->
-<!--            <input type="radio" id="r1_star2" name="rate" value="2" />-->
-<!--            <label for="r1_star2" title="text">2</label>-->
-<!--            <input type="radio" id="r1_star1" name="rate" value="1" />-->
-<!--            <label for="r1_star1" title="text">1</label>-->
-<!--        </div>-->
-<!--        <br>-->
-<!--        <br>-->
-<!--        <br>-->
-<!--    <label for="FQuality"><b>Food quality</b></label>-->
-<!--    <br>-->
-
-<!--        <div class="rate">-->
-<!--            <input type="radio" id="r2_star5" name="rate" value="5" />-->
-<!--            <label for="r2_star5" title="text">5</label>-->
-<!--            <input type="radio" id="r2_star4" name="rate" value="4" />-->
-<!--            <label for="r2_star4" title="text">4</label>-->
-<!--            <input type="radio" id="r2_star3" name="rate" value="3" />-->
-<!--            <label for="r2_star3" title="text">3</label>-->
-<!--            <input type="radio" id="r2_star2" name="rate" value="2" />-->
-<!--            <label for="r2_star2" title="text">2</label>-->
-<!--            <input type="radio" id="r2_star1" name="rate" value="1" />-->
-<!--            <label for="r2_star1" title="text">1</label>-->
-<!--        </div>-->
-<!--        <br>-->
-<!--        <br>-->
-<!--        <br>-->
-<!--    <label for="SQuality"><b>Service quality</b></label>-->
-<!--    <br>-->
-<!--        <div class="rate">-->
-<!--            <input type="radio" id="r3_star5" name="rate" value="5" />-->
-<!--            <label for="r3_star5" title="text">5</label>-->
-<!--            <input type="radio" id="r3_star4" name="rate" value="4" />-->
-<!--            <label for="r3_star4" title="text">4</label>-->
-<!--            <input type="radio" id="r3_star3" name="rate" value="3" />-->
-<!--            <label for="r3_star3" title="text">3</label>-->
-<!--            <input type="radio" id="r3_star2" name="rate" value="2" />-->
-<!--            <label for="r3_star2" title="text">2</label>-->
-<!--            <input type="radio" id="r3_star1" name="rate" value="1" />-->
-<!--            <label for="r3_star1" title="text">1</label>-->
-<!--        </div>-->
-<!--        <br>-->
-<!--        <br>-->
-<!--        <br>-->
-
-<!--    <label for="VFMoney"><b>Value for money</b></label>-->
-<!--    <br>-->
-<!--        <div class="rate">-->
-<!--            <input type="radio" id="r4_star5" name="rate" value="5" />-->
-<!--            <label for="r4_star5" title="text">5</label>-->
-<!--            <input type="radio" id="r4_star4" name="rate" value="4" />-->
-<!--            <label for="r4_star4" title="text">4</label>-->
-<!--            <input type="radio" id="r4_star3" name="rate" value="3" />-->
-<!--            <label for="r4_star3" title="text">3</label>-->
-<!--            <input type="radio" id="r4_star2" name="rate" value="2" />-->
-<!--            <label for="r4_star2" title="text">2</label>-->
-<!--            <input type="radio" id="r4_star1" name="rate" value="1" />-->
-<!--            <label for="r4_star1" title="text">1</label>-->
-<!--        </div>-->
-<!--        <br>-->
-<!--        <br>-->
-<!--        <br>-->
-
-<!-- <div class="radioRate"> -->
-        <div class="radioRate">
-        <label>
-            <div class="Cleanliness"
-            <label for="clean"><b>Cleanliness</b></label>
-            <br>
-            <input type="radio" checked="checked" name="remember" id="r1_star1" style="margin-bottom:15px"><label for="1">☆</label>
-            <input type="radio" checked="checked" name="remember" id="r1_star2" style="margin-bottom:15px">2 Stars
-            <input type="radio" checked="checked" name="remember" id="r1_star3" style="margin-bottom:15px">3 Stars
-            <input type="radio" checked="checked" name="remember" id="r1_star4" style="margin-bottom:15px">4 Stars
-            <input type="radio" checked="checked" name="remember" id="r1_star5" style="margin-bottom:15px">5 Stars
-        </label>
-            <br>
-            <label><label for="FQuality"><b>Food quality</b></label>
-            <br>
-            <input type="radio" checked="checked" name="remember" style="margin-bottom:15px">1 Star
-            <input type="radio" checked="checked" name="remember" style="margin-bottom:15px">2 Stars
-            <input type="radio" checked="checked" name="remember" style="margin-bottom:15px">3 Stars
-            <input type="radio" checked="checked" name="remember" style="margin-bottom:15px">4 Stars
-            <input type="radio" checked="checked" name="remember" style="margin-bottom:15px">5 Stars
-        </label>
-            <br>
-            <label><label for=SQquality"><b>Service quality</b></label>
-            <br>
-            <input type="radio" checked="checked" name="remember" style="margin-bottom:15px">1 Star
-            <input type="radio" checked="checked" name="remember" style="margin-bottom:15px">2 Stars
-            <input type="radio" checked="checked" name="remember" style="margin-bottom:15px">3 Stars
-            <input type="radio" checked="checked" name="remember" style="margin-bottom:15px">4 Stars
-            <input type="radio" checked="checked" name="remember" style="margin-bottom:15px">5 Stars
-        </label>
-            <br>
-            <label><label for="VForMoney"><b>Value for money</b></label>
-            <br>
-            <input type="radio" checked="checked" name="remember" style="margin-bottom:15px">1 Star
-            <input type="radio" checked="checked" name="remember" style="margin-bottom:15px">2 Stars
-            <input type="radio" checked="checked" name="remember" style="margin-bottom:15px">3 Stars
-            <input type="radio" checked="checked" name="remember" style="margin-bottom:15px">4 Stars
-            <input type="radio" checked="checked" name="remember" style="margin-bottom:15px">5 Stars
-        </label>
-      </div>
-
- </div>
-  <div class="save">
-      <button type="button" class="save">Save</button>
-  </div>
+    <div class="clearfix">
+        <button type="button" class="input">Save</button>
+    </div>
 
   </form>
 
