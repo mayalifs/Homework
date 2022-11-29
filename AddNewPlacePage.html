@@ -1,54 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<title>Title</title>
-		<link rel="stylesheet" href="Project.css">
-	</head>
-	<body class="body">
-			<nav>
-				<ul>
-					<li><a href="HomePage.html" >Home Page</a></li>
-					<li><a href="FindPlacePage.html" >Where to eat</a></li>
-					<li><a href="RestaurantCoffePage.html">Restaurants/Coffe Shops</a></li>
-					<li><a href="SignInPage.html" >Sign In</a></li>
-					<li><a href="SignUpPage.html">Sign Up</a></li>
-				</ul>
-			</nav>
+   <head>
+      <meta charset="UTF-8">
+      <title>Title</title>
+      <link rel="stylesheet" href="Project.css">
+   </head>
+   <body class="body">
+         <nav>
+            <ul>
+               <li><a href="HomePage.html" >Home Page</a></li>
+               <li><a href="FindPlacePage.html" >Where to eat</a></li>
+               <li><a href="RestaurantCoffePage.html">Restaurants/Coffe Shops</a></li>
+               <li><a href="SignInPage.html" >Sign In</a></li>
+               <li><a href="SignUpPage.html">Sign Up</a></li>
+            </ul>
+         </nav>
 
-		<div>
-			<h1>VDine</h1>
-			<h2>Eat, Drink, Vegan, Repeat</h2>
-		</div>
-		<!--***************************-->
-		<form>
-				<h4>Adding a new place</h4>
-				<br>
-				<p>
-					Please fill in this form to add a new place :)
-				</p>
-				<hr>
-				<div class="radio">
-					<label>
-						<input type="radio" checked="checked" name="remember" style="margin-bottom:15px">
-						 Restaurant
-						<input type="radio" checked="checked" name="remember" style="margin-bottom:15px">
-						 Coffee shop
-					</label>
-				</div>
-				<label for="rname"><b>Name</b></label>
-				<input class="input" type="text" placeholder="Enter place name" name="rnam" required>
-				<label for="address"><b>Address</b></label>
-				<input class="input" type="text" placeholder="Enter adrress" name="address" required>
-				<label for="site"><b>Google site</b></label>
-				<input class="input" type="text" placeholder="Enter google site" name="site" required>
-				<label for="openH"><b>Open hours</b></label>
-				<input class="input" type="password" placeholder="Enter open hours" name="openH" required>
-				<label for="contactN"><b>Contact number</b></label>
-				<input class="input" type="password" placeholder="Enter contact number" name="contactN" required>
-				<div class="clearfix">
-					<button type="button" class="input">Add</button>
-				</div>
-		</form>
-	</body>
+      <div>
+         <h1>VDine</h1>
+         <h2>Eat, Drink, Vegan, Repeat</h2>
+      </div>
+
+
+      <form>
+            <h4>Adding a new place</h4>
+            <br>
+            <p>
+               Please fill in this form to add a new place :)
+            </p>
+            <hr>
+            <div class="radio">
+               <label>
+                  <input type="radio" checked="checked" name="remember">Restaurant
+                  <input type="radio" checked="checked" name="remember">Coffee shop
+               </label>
+            </div>
+            <label for="rname"><b>Name</b></label>
+            <input class="input" type="text" placeholder="Enter place name" name="rnam" required>
+            <label for="address"><b>Address</b></label>
+            <input class="input" type="text" placeholder="Enter adrress" name="address" required>
+            <label for="site"><b>Google site</b></label>
+            <input class="input" type="text" placeholder="Enter google site" name="site" required>
+            <label for="openH"><b>Open hours</b></label>
+            <input class="input" type="password" placeholder="Enter open hours" name="openH" required>
+            <label for="contactN"><b>Contact number</b></label>
+            <input class="input" type="password" placeholder="Enter contact number" name="contactN" required>
+            <div class="clearfix">
+               <button type="button" class="input">Add</button>
+            </div>
+      </form>
+   </body>
 </html>
