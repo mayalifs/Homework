@@ -1,6 +1,7 @@
 .body{
 	background-image: url('FoodBackround.jpg');
 	background-size: cover;
+	background-position: center;
 	font-family: Thonburi;
 	color: lavender;
 }
@@ -76,6 +77,137 @@ h4
 }
 
 
+/********************Footer*******************/
+
+/*.footer{*/
+/*	color: black;*/
+/*	background-size: cover;*/
+/*}*/
+
+/*common styles !!!YOU DON'T NEED THEM */
+.container {
+  margin: 60px auto 0px auto;
+  text-align: center;
+}
+/*.container h1 {*/
+/*  font-family: "Roboto", sans-serif;*/
+/*  font-weight: 900;*/
+/*  font-size: 30px;*/
+/*  text-transform: uppercase;*/
+/*  color: #212121;*/
+/*  letter-spacing: 3px;*/
+/*}*/
+/*.container h1 span {*/
+/*  display: inline-block;*/
+/*}*/
+/*.container h1 span:before, .container h1 span:after {*/
+/*  content: "";*/
+/*  display: block;*/
+/*  width: 34px;*/
+/*  height: 2px;*/
+/*  background-color: #212121;*/
+/*  margin: 0px 0px 0px 2px;*/
+/*}*/
+
+.effect {
+  width: 100%;
+  padding: 50px 0px 70px 0px;
+  /*background-color: #212121;*/
+}
+/*.effect h2 {*/
+/*  color: #fff;*/
+/*  font-family: "Playfair Display", serif;*/
+/*  font-weight: 400;*/
+/*  font-size: 25px;*/
+/*  letter-spacing: 3px;*/
+/*}*/
+/*.effect:nth-child(2) {*/
+/*  margin-top: 50px;*/
+/*}*/
+/*.effect:nth-child(2n+1) {*/
+/*  !*background-color: #fff;*!*/
+/*}*/
+/*.effect:nth-child(2n+1) h2 {*/
+/*  color: #212121;*/
+/*}*/
+.effect .buttons {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+/*.effect a:last-child {*/
+/*  margin-right: 0px;*/
+/*}*/
+
+/*common link styles !!!YOU NEED THEM*/
+.effect {
+  display: flex;
+}
+.effect a {
+  text-decoration: none;
+  /*color: #fff;*/
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  margin-right: 20px;
+  font-size: 25px;
+  overflow: hidden;
+  position: relative;
+}
+.effect a i {
+  position: relative;
+  /*z-index: 3;*/
+}
+.effect a.fb {
+	/*background-image: url('facebook.jpeg');*/
+  	background-color: #3b5998;
+}
+
+.effect a.insta {
+	/*background-image: url('instagram.jpeg');*/
+  background-color: #bc2a8d;
+}
+.effect a.in {
+	/*background-image: url('linkedin.jpeg');*/
+  background-color: #007bb6;
+}
+
+
+
+/* claudio effect */
+.effect.claudio a {
+  transition: transform 0.2s linear 0s, border-radius 0.2s linear 0s;
+}
+.effect.claudio a:hover {
+  transform: scale(1.2);
+  border-bottom-left-radius: 50%;
+  border-top-right-radius: 50%;
+}
+
+
+.footer{
+	color: white;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 14px;
+	padding: 10px;
+	text-align:center;
+	/*margin-left: 570px;*/
+	/*margin-right: 350px;*/
+}
+
+
+
+.footer-basic .social {
+  text-align:center;
+  padding-bottom:25px;
+}
+  /*}*/
+/*}*/
+
 /*****************SignIN******************/
 
 
@@ -91,7 +223,13 @@ h4
 	background-color: lavender;
 }
 
-
+.subconbutton{
+	color: white;
+	text-decoration: none;
+	/*text-transform: uppercase;*/
+	/*font-size: 12px;*/
+	/*padding: 10px;*/
+}
 
 
 
