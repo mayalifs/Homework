@@ -130,10 +130,15 @@ h4
 /*.effect:nth-child(2n+1) h2 {*/
 /*  color: #212121;*/
 /*}*/
+
+
+
 .effect .buttons {
   margin-top: 50px;
   display: flex;
   justify-content: center;
+	width: 100%;
+
 }
 /*.effect a:last-child {*/
 /*  margin-right: 0px;*/
@@ -177,11 +182,11 @@ h4
 
 
 
-/* claudio effect */
-.effect.claudio a {
+/* social effect */
+.effect.social a {
   transition: transform 0.2s linear 0s, border-radius 0.2s linear 0s;
 }
-.effect.claudio a:hover {
+.effect.social a:hover {
   transform: scale(1.2);
   border-bottom-left-radius: 50%;
   border-top-right-radius: 50%;
@@ -199,7 +204,9 @@ h4
 	/*margin-right: 350px;*/
 }
 
+.social{
 
+}
 
 .footer-basic .social {
   text-align:center;
