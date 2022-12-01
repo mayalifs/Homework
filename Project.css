@@ -2,6 +2,7 @@
 	background-image: url('FoodBackround.jpg');
 	background-size: cover;
 	background-position: center;
+	width: 100%;
 	font-family: Thonburi;
 	color: lavender;
 }
@@ -32,12 +33,22 @@ nav a
 	/*text-align: center;*/
 }
 
-/*Color the href when mouse on it*/
+/*Color the menu when mouse on it*/
 nav a:hover
 {
 	color: #303b37;
 	background-color:var(--headcolor);
 	border-radius: 4px;
+}
+
+/*Footer contact/terms of use link design*/
+a{
+	color: white;
+	text-decoration-line: none;
+}
+
+a:hover{
+	color: #303b37;
 }
 
 .body h1, h2, h3, h4
@@ -321,8 +332,6 @@ form
 	margin: 5px;
 	padding: 0;
 }
-
-
 
 
 .radioRate
