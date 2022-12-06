@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<title>Title</title>
+		<title>Find a Place</title>
 		<link rel="stylesheet" href="Project.css">
 	</head>
 	<body class="body">
@@ -10,7 +10,7 @@
 			<ul>
 				<li><a href="HomePage.html" >Home Page</a></li>
 				<li><a href="FindPlacePage.html" >Where to eat</a></li>
-				<li><a href="RestaurantCoffePage.html">Restaurants/Coffe Shops</a></li>
+				<li><a href="RestaurantCoffePage.html">Restaurants/Coffee Shops</a></li>
 				<li><a href="SignInPage.html" >Sign In</a></li>
 				<li><a href="SignUpPage.html">Sign Up</a></li>
 			</ul>
@@ -33,19 +33,18 @@
 					</label>
 				</div>
 				<label for="cname"><b>City</b></label>
-				<select class="input" name="places" required>
+				<select class="input" name="places" id="places" required>
 					<option value="Haifa">Haifa, Israel</option>
 					<option value="TelAviv">Tel Aviv, Israel</option>
 					<option value="Modiin">Modi'in, Israel</option>
-					<option value="NewYork">New York, USA</option>
+					<option value="NewYork">New York, New York</option>
 					<option value="AlpeD'huez">Alpe D'huez, France</option>
 					<option value="Dolomites">Dolomites, France</option>
 					<option value="Barcelona">Barcelona, Spain</option>
 				</select>
 				<div class="clearfix">
-					<button type="button" class="search">Search</button>
+					<input class="button" type="submit" value="Search"></input>
 				</div>
-
 
 		</form>
 
@@ -71,5 +70,6 @@
 			VDine © 2022
 			<p>
 		</footer>
+	<script src="Project.js"></script>
 	</body>
 </html>

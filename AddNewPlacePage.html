@@ -2,7 +2,7 @@
 <html lang="en">
    <head>
       <meta charset="UTF-8">
-      <title>Title</title>
+      <title>Add a New Place</title>
       <link rel="stylesheet" href="Project.css">
    </head>
    <body class="body">
@@ -10,7 +10,7 @@
             <ul>
                <li><a href="HomePage.html" >Home Page</a></li>
                <li><a href="FindPlacePage.html" >Where to eat</a></li>
-               <li><a href="RestaurantCoffePage.html">Restaurants/Coffe Shops</a></li>
+               <li><a href="RestaurantCoffePage.html">Restaurants/Coffee Shops</a></li>
                <li><a href="SignInPage.html" >Sign In</a></li>
                <li><a href="SignUpPage.html">Sign Up</a></li>
             </ul>
@@ -36,17 +36,31 @@
                </label>
             </div>
             <label for="rname"><b>Name</b></label>
-            <input class="input" type="text" placeholder="Enter place name" name="rnam" required>
-            <label for="address"><b>Address</b></label>
-            <input class="input" type="text" placeholder="Enter adrress" name="address" required>
+            <input class="input" type="text" placeholder="Enter place name" name="rnam" id="rname" required>
+            <label for="street"><b>Street</b></label>
+            <input class="input" type="text" placeholder="Enter street number" name="street" id="street" required>
+            <label for="city"><b>City</b></label>
+            <input class="input" type="text" placeholder="Enter city" name="city" id="city" required>
             <label for="site"><b>Google site</b></label>
-            <input class="input" type="text" placeholder="Enter google site" name="site" required>
+            <input class="input" type="text" placeholder="Enter google site" name="site" id="site" required>
+<!--            <label for="openH"><b>Open hours</b></label>-->
+<!--            <input class="input" type="password" placeholder="Enter open hours" name="openH" id="openH" required>-->
             <label for="openH"><b>Open hours</b></label>
-            <input class="input" type="password" placeholder="Enter open hours" name="openH" required>
+          <div class="OpenH">
+            <label for="openHst">Sunday-Thursday:</label>
+            <input type="time" id="openHst" name="openH">
+            <input type="time" id="closeHst" name="closeH"><br>
+            <label for="openHf">Friday:</label>
+            <input type="time" id="openHf" name="openH">
+            <input type="time" id="closeHt" name="closeH"><br>
+            <label for="openHs">Saturday:</label>
+            <input type="time" id="openHs" name="openH">
+            <input type="time" id="closeHs" name="closeH"><br>
+          </div>
             <label for="contactN"><b>Contact number</b></label>
-            <input class="input" type="password" placeholder="Enter contact number" name="contactN" required>
+            <input class="input" type="password" placeholder="Enter contact number" name="contactN" id="contactN" required>
             <div class="clearfix">
-               <button type="button" class="input">Add</button>
+               <input class="button" type="submit" value="Add" id="add"></input>
             </div>
       </form>
 
@@ -72,5 +86,6 @@
 			VDine © 2022
 			<p>
 		</footer>
+   <script src="Project.js"></script>
    </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<title>Title</title>
+		<title>Sign Up</title>
 		<link rel="stylesheet" href="Project.css">
 	</head>
 	<body class="body">
@@ -10,7 +10,7 @@
 			<ul>
 				<li><a href="HomePage.html" >Home Page</a></li>
 				<li><a href="FindPlacePage.html" >Where to eat</a></li>
-				<li><a href="RestaurantCoffePage.html">Restaurants/Coffe Shops</a></li>
+				<li><a href="RestaurantCoffePage.html">Restaurants/Coffee Shops</a></li>
 				<li><a href="SignInPage.html" >Sign In</a></li>
 				<li><a href="SignUpPage.html">Sign Up</a></li>
 			</ul>
@@ -27,19 +27,19 @@
 			</p>
 			<hr>
 			<label for="fname"><b>Full Name</b></label>
-			<input class="input" type="text" placeholder="Enter full name" name="fnam" required>
+			<input class="input" type="text" placeholder="Enter full name" name="fnam" id="fname" required>
 			<label for="uname"><b>User Name</b></label>
-			<input class="input" type="text" placeholder="Enter user name" name="uname" required>
+			<input class="input" type="text" placeholder="Enter user name" name="uname" id="uname" required>
 			<label for="email"><b>Email</b></label>
-			<input class="input" type="text" placeholder="Enter Email" name="email" required>
+			<input class="input" type="text" placeholder="Enter Email" name="email" id="email" required>
 			<label for="psw"><b>Password</b></label>
-			<input class="input" type="password" placeholder="Enter Password" name="psw" required>
-			<label for="psw-repeat"><b>Confirm Password</b></label>
-			<input class="input" type="password" placeholder="Confirm Password" name="psw-repeat" required>
+			<input class="input" type="password" placeholder="Enter Password" name="psw" id="psw" required>
+			<label for="pswrepeat"><b>Confirm Password</b></label>
+			<input class="input" type="password" placeholder="Confirm Password" name="psw-repeat" id="pswrepeat" required>
 			<div class="clearfix">
-				<button type="button" class="cancelbtn">Cancel</button>
+				<input class="button" type="submit" value="Cancel" id="cancelbtn"></input>
 				<br>
-				<button type="submit" class="signupbtn">Sign Up</button>
+				<input class="button" type="submit" value="Sign Up" id="signupbtn"></input>
 			</div>
 
 		</form>
@@ -66,5 +66,6 @@
 			VDine © 2022
 			<p>
 		</footer>
+	<script src="Project.js"></script>
 	</body>
 </html>
