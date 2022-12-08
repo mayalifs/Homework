@@ -1,0 +1,551 @@
+
+/*All pages style*/
+.body
+{
+	/*display: grid;*/
+	background-image: url('FoodBackround.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	width: 100%;
+	font-family: Thonburi;
+	color: lavender;
+}
+
+
+/*Location of the menu bar*/
+nav
+{
+	float: contour;
+	text-align: center;
+}
+
+/*Design for the menu bar*/
+nav li
+{
+	display: inline-block;
+	margin-left: 30px;
+	padding-top: 5vh;
+	position: relative;
+}
+
+/*Design for the menu bar*/
+nav a
+{
+	color: white;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 12px;
+	padding: 10px;
+}
+
+/*Color the menu when mouse on it*/
+nav a:hover
+{
+	color: #303b37;
+	background-color:var(--headcolor);
+	border-radius: 4px;
+}
+
+/*Footer contact/terms of use link design*/
+a
+{
+	color: white;
+	text-decoration-line: none;
+}
+
+/*Color the footer links when mouse on it*/
+a:hover
+{
+	color: #303b37;
+}
+
+/*Design of all main headers*/
+.body h1, h2, h3, h4
+{
+	text-align: center;
+}
+
+/*h1 design - VDine*/
+h1
+{
+	margin-top: 5vh;
+	font-size: 75px;
+}
+
+/*h2 design - Eat, Drink, Vegan Repeat*/
+h2
+{
+	font-size: 25px;
+}
+
+/*h3 design - Here you will find the best vegan place around you*/
+h3
+{
+	font-size: 35px;
+	margin-top: 150px;
+}
+
+/*h4 design - Sign In/Sign Up/Adding a new place*/
+h4
+{
+	font-size: 35px;
+	margin-top: 50px;
+}
+
+/*.clearfix:hover
+{
+	*/
+	/* color: black;
+	*/
+/*}
+
+*/
+/********************Footer*******************/
+/*Design the footer items*/
+.footer
+{
+	margin-top: 10%;
+	color: white;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 14px;
+	text-align:center;
+	max-height: 20px;
+	/*background-color: #212121;
+	*/
+}
+
+.effect
+{
+	width: 100%;
+	padding: 0px 0px 20px 0px;
+}
+
+.effect .buttons
+{
+	margin-top: 50px;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+
+/*common link styles !!!YOU NEED THEM*/
+.effect
+{
+	display: flex;
+}
+
+.effect a
+{
+	text-decoration: none;
+	/*color: #fff;
+	*/
+	width: 60px;
+	height: 60px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 10px;
+	margin-right: 20px;
+	font-size: 25px;
+	overflow: hidden;
+	position: relative;
+}
+
+.effect a i
+{
+	position: relative;
+	/*z-index: 3;
+	*/
+}
+
+.effect a.fb
+{
+	/*background-image: url('facebook.jpeg');
+	*/
+	background-color: #3b5998;
+}
+
+.effect a.insta
+{
+	/*background-image: url('instagram.jpeg');
+	*/
+	background-color: #bc2a8d;
+}
+
+.effect a.in
+{
+	/*background-image: url('linkedin.jpeg');
+	*/
+	background-color: #007bb6;
+}
+
+/* social effect */
+.effect.social a
+{
+	transition: transform 0.2s linear 0s, border-radius 0.2s linear 0s;
+}
+
+.effect.social a:hover
+{
+	transform: scale(1.2);
+	border-bottom-left-radius: 50%;
+	border-top-right-radius: 50%;
+}
+
+.social
+{
+}
+
+.footer-basic .social
+{
+	text-align:center;
+	padding-bottom:25px;
+}
+
+/*****************SignIN******************/
+.input
+{
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	border-radius: 15px;
+	background-color: lavender;
+}
+
+.subconbutton
+{
+	color: white;
+	text-decoration: none;
+	/*text-transform: uppercase;
+	*/
+	/*font-size: 12px;
+	*/
+	/*padding: 10px;
+	*/
+}
+
+/*****************SignUp******************/
+*
+{
+box-sizing: border-box}
+
+hr
+{
+	border: 1px solid #f1f1f1;
+	margin-bottom: 25px;
+}
+
+/* Set a style for all buttons */
+.button
+{
+	background-color: lavender;
+	color: black;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+	opacity: 0.9;
+	border-radius: 15px;
+}
+
+.button:hover
+{
+	opacity:1;
+}
+
+form
+{
+	padding: 16px;
+	margin-right: 350px;
+	margin-left: 350px;
+	color: lavender;
+	font-family: Thonburi;
+}
+
+/* Clear floats */
+.clearfix::after
+{
+	content: "";
+	clear: both;
+	display: table;
+}
+
+.clearfix
+{
+	color: lavender;
+	margin-right: 250px;
+	margin-left: 250px;
+}
+
+/*****************AddNewPlace******************/
+
+input[type="time" i]
+{
+	background-color:lavender;
+	margin-top:8px;
+	width:100%;
+	text-align:center;
+	border-radius:15px;
+	height:50px;
+	padding: 12px 20px;
+}
+
+#OpenH
+{
+	display: flex;
+	margin: 10px;
+	padding: 10px;
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	box-sizing: border-box;
+	border-radius: 15px;
+}
+
+/*****************FindRestaurantCoffee******************/
+/*****************Rate******************/
+/*All rate options design*/
+.rateAll
+{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+*
+{
+	margin: 0;
+	padding: 0;
+}
+
+.rate
+{
+	justify-content: space-between;
+	float: left;
+	height: 46px;
+	padding: 0 10px;
+}
+
+.rate:not(:checked) > input
+{
+	position: absolute;
+	top:-9999px;
+}
+
+.rate:not(:checked) > label
+{
+	float:right;
+	width:1em;
+	overflow:hidden;
+	white-space:nowrap;
+	cursor:pointer;
+	font-size:30px;
+	color:#ccc;
+}
+
+.rate:not(:checked) > label:before
+{
+	content: '★ ';
+}
+
+.rate > input:checked ~ label
+{
+	color: #ffc700;
+}
+
+.rate:not(:checked) > label:hover,.rate:not(:checked) > label:hover ~ label
+{
+	color: #deb217;
+}
+
+.rate > input:checked + label:hover,.rate > input:checked + label:hover ~ label,.rate > input:checked ~ label:hover,.rate > input:checked ~ label:hover ~ label,.rate > label:hover ~ input:checked ~ label
+{
+	color: #c59b08;
+}
+
+/***/
+/*
+{
+	*/
+	/* margin: 5px;
+	*/
+	/* padding: 0;
+	*/
+/*}
+
+*/
+/*.radioRate*/
+/*
+{
+	*/
+	/* display: grid;
+	*/
+	/* font-weight: bold;
+	*/
+	/* !*align-items: end;
+	*!*/
+	/* justify-content: end;
+	*/
+/*}
+
+*/
+/*.rate
+{
+	*/
+	/* display: flex;
+	*/
+	/* font-weight: bold;
+	*/
+	/* align-items: center;
+	*/
+	/* justify-content: center;
+	*/
+	/* !*display: flex;
+	*!*/
+	/* !*justify-items: center;
+	*!*/
+	/*float: left;
+	*/
+	/*height: 46px;
+	*/
+	/*padding: 0 10px;
+	*/
+/*}
+
+*/
+/*.rate:not(:checked) > input
+{
+	*/
+	/*position:absolute;
+	*/
+	/*top:-9999px;
+	*/
+/*}
+
+*/
+/*.rate:not(:checked) > label
+{
+	*/
+	/*float:right;
+	*/
+	/*width:1em;
+	*/
+	/*overflow:hidden;
+	*/
+	/*white-space:nowrap;
+	*/
+	/*cursor:pointer;
+	*/
+	/*font-size:30px;
+	*/
+	/*color:#ccc;
+	*/
+/*}
+
+*/
+/*.rate:not(:checked) > label:before
+{
+	*/
+	/*content: '★ ';
+	*/
+/*}
+
+*/
+/*.rate > input:checked ~ label
+{
+	*/
+	/*color: #ffc700;
+	*/
+/*}
+
+*/
+/*.rate:not(:checked) > label:hover,*/
+/*.rate:not(:checked) > label:hover ~ label
+{
+	*/
+	/*color: #deb217;
+	*/
+/*}
+
+*/
+/*.rate > input:checked + label:hover,*/
+/*.rate > input:checked + label:hover ~ label,*/
+/*.rate > input:checked ~ label:hover,*/
+/*.rate > input:checked ~ label:hover ~ label,*/
+/*.rate > label:hover ~ input:checked ~ label
+{
+	*/
+	/*color: #c59b08;
+	*/
+/*}
+
+*/
+/*****************Restaurant/CoffePage******************/
+.places
+{
+	display: grid;
+	grid-template-columns: repeat(3, 350px);
+	align-items: center;
+	justify-content: space-around;
+	gap: 50px;
+}
+
+.item
+{
+	background-color: white;
+	color: black;
+	/*border: 1px solid balck(0, 0, 0, 0.5);
+	*/
+	padding: 30px;
+	font-size: 16px;
+	text-align: center;
+	border-radius: 15px;
+	background-color: lavender;
+}
+
+.places a
+{
+	color: black;
+}
+
+.openHours
+{
+	text-align: left;
+}
+
+.address
+{
+	text-align: center;
+}
+
+.contactNumber
+{
+	text-align: center;
+}
+
+/*****************RatePage******************/
+.option
+{
+	width: 25%;
+	padding: 12px 20px;
+	border-radius: 15px;
+	background-color: lavender;
+}
+
+/*************Active Nav**************/
+/*.activePage
+{
+	*/
+	/* color: cadetblue;
+	*/
+/*}
+
+*/
