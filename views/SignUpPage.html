@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Sign Up</title>
     <link rel="stylesheet" href="../static/Project.css">
-    <script src="../static/Project.js"></script>
+    <script defer src="../static/Project.js"></script>
 </head>
 <body class="body">
 <nav>
@@ -20,7 +20,7 @@
     <h1>VDine</h1>
     <h2>Eat, Drink, Vegan, Repeat</h2>
 </div>
-<form>
+<form class="sinUpForm">
     <h4>Sign Up</h4>
     <br>
     <p>
@@ -38,9 +38,9 @@
     <label for="pswrepeat"><b>Confirm Password</b></label>
     <input class="input" type="password" placeholder="Confirm Password" name="psw-repeat" id="pswrepeat" required>
     <div class="clearfix">
-        <input class="button" type="submit" value="Cancel" id="cancelbtn"></input>
+        <a href="HomePage.html"><input class="button" type="submit" value="Sign Up" id="signupbtn" onsubmit="sinUpFormForm()"></input></a>
         <br>
-        <input class="button" type="submit" value="Sign Up" id="signupbtn"></input>
+<!--        <input class="button" type="submit" value="Cancel" id="cancelbtn"></input>-->
     </div>
 
 </form>

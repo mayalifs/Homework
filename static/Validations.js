@@ -21,11 +21,11 @@ function validSignInForm(){
 
 //signup
 
-const fname=document.querySelector("fname");
-const uname=document.querySelector("uname");
+let fname=document.querySelector("fname");
+let uname=document.querySelector("uname");
 const email=document.querySelector("email");
-const psw=document.querySelector("psw");
-const pswrepeat=document.querySelector("pswrepeat");
+let psw=document.querySelector("psw");
+let pswrepeat=document.querySelector("pswrepeat");
 
 function validSignInForm(){
     if (fname==null || fmane=="")

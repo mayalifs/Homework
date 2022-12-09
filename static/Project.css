@@ -2,7 +2,8 @@
 /*All pages style*/
 .body
 {
-	/*display: grid;*/
+	/*display: flex;*/
+	/*flex-direction: column;*/
 	background-image: url('FoodBackround.jpg');
 	background-size: cover;
 	background-position: center;
@@ -38,6 +39,15 @@ nav a
 	text-transform: uppercase;
 	font-size: 12px;
 	padding: 10px;
+}
+
+.active {
+  background: #303b37;
+	color: white;
+  overflow:hidden;
+  border-bottom:2px solid white;
+  padding:8px;
+
 }
 
 /*Color the menu when mouse on it*/
@@ -241,9 +251,24 @@ hr
 	margin-bottom: 25px;
 }
 
+/*Set the forms style*/
+form
+{
+	display: grid;
+	align-items: center;
+	/*justify-content: center;*/
+	width: 60%;
+	margin-left: 20%;
+	padding: 16px;
+	color: lavender;
+	font-family: Thonburi;
+}
+
 /* Set a style for all buttons */
 .button
 {
+	/*display: grid;*/
+	/*align-items: center;*/
 	background-color: lavender;
 	color: black;
 	padding: 14px 20px;
@@ -260,13 +285,14 @@ hr
 	opacity:1;
 }
 
-form
+.clearfix
 {
-	padding: 16px;
-	margin-right: 350px;
-	margin-left: 350px;
+	/*display: grid;*/
+	/*justify-content: center;*/
+	width: 25%;
 	color: lavender;
-	font-family: Thonburi;
+	/*margin-right: 250vh;*/
+	margin-left: 35%;
 }
 
 /* Clear floats */
@@ -277,12 +303,7 @@ form
 	display: table;
 }
 
-.clearfix
-{
-	color: lavender;
-	margin-right: 250px;
-	margin-left: 250px;
-}
+
 
 /*****************AddNewPlace******************/
 
@@ -311,6 +332,8 @@ input[type="time" i]
 }
 
 /*****************FindRestaurantCoffee******************/
+
+
 /*****************Rate******************/
 /*All rate options design*/
 .rateAll
