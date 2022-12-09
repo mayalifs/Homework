@@ -28,32 +28,27 @@ class Places {
 PlaceList = [];
 
 var addPlace = document.querySelector("addPlace");
-addPlace.onsubmit = () => {
-    name = document.getElementById("name").value
-    street = document.getElementById("street").value;
-    city = document.getElementById("city").value;
-    googleSite = document.getElementById("googleSite").value
-    contact = document.getElementById("contact").value
+addPlace.onsubmit = function() {
+    let rname = document.getElementById("rname").value
+    let street = document.getElementById("street").value;
+    let city = document.getElementById("city").value;
+    let googleSite = document.getElementById("googleSite").value
+    let contact = document.getElementById("contact").value
 
-    newPlace = new Places(name, street, city, googleSite, contact)
-    list.push(newPlace)
+    const newPlace = new Places(rname, street, city, googleSite, contact)
+    PlaceList.push(newPlace)
 }
 
 
-// Places.prototype.getCity = function (){
-//         return this.address.city;
-//     }
+// function OpenH(SunTillThur, friday, saturday)
+function OpenH(openHst, closeHst, openHf, closeHf, openHs, closeHs){
+    // this.SunTillThur = `Sunday-Thursday: ${SunTillThur}`;
+    // this.friday = `Friday: ${friday}`;
+    // this.saturday = `Saturday: ${saturday}`;
 
-// function Address(street, number, city){
-//     this.street = street;
-//     this.number = number;
-//     this.city = city;
-// }
-
-function OpenH(SunTillThur, friday, saturday) {
-    this.SunTillThur = `Sunday-Thursday: ${SunTillThur}`;
-    this.friday = `Friday: ${friday}`;
-    this.saturday = `Saturday: ${saturday}`;
+    this.SunTillThur = `Sunday-Thursday: ${openHst} + ${closeHst}`;
+    this.friday = `Friday: ${openHf} + ${closeHf}`;
+    this.saturday = `Saturday: ${openHs} + ${closeHs}`;
 }
 
 const place1 = new Places('Anastasia', 'Frishman 54', 'Tel Aviv', 'https://www.anastasiatlv.co.il/',
@@ -65,78 +60,48 @@ const place3 = new Places('Goodness', 'King George 41', 'Tel Aviv', 'https://www
     new OpenH('12am-10pm', '12am-4pm', '12pm-8pm'),
     '055-973-5792');
 
-console.log(place1);
-console.log(place2);
-console.log(place3);
+PlaceList.push(place1);
+PlaceList.push(place2);
+PlaceList.push(place3);
 
-console.log(place1.address);
+
 
 
 //Class User
 class User {
-    constructor(fname, uname, email, psw, pswrepeat) {
+    constructor(fname, uname, email, psw) {
         this.fname = fname;
         this.uname = uname;
         this.email = email;
         this.psw = psw;
-        this.pswrepeat = pswrepeat;
     }
 }
-
-const user1 = new User('Maya Lifshitz', 'mali', 'maya@gmail.com', '12345678!', '12345678!');
-const user2 = new User('Dana Cohen', 'daco', 'dana@walla.com', '11223344?', '11223344?');
-const user3 = new User('Noy Kalifa', 'noka', 'noy123@hotmail.com', '!?987654321', '!?987654321');
-
-console.log(user1);
-console.log(user2);
-console.log(user3);
 
 
 UserList = [];
 
-var sinUpFormForm = document.querySelector("sinUpForm");
-sinUpFormForm.onsubmit = function () {
-    fname = document.getElementById('fname').value;
-    uname = document.getElementById('uname').value;
-    email = document.getElementById('city').value;
-    psw = document.getElementById('psw').value;
-    pswrepeat = document.getElementById('pswrepeat').value;
+var signUpForm = document.querySelector("sinUpForm");
+signUpForm.onsubmit = function () {
+    let fname = document.getElementById('fname').value;
+    let uname = document.getElementById('uname').value;
+    let email = document.getElementById('city').value;
+    let psw = document.getElementById('psw').value;
 
-    newUser = new User(fname, uname, email, psw, pswrepeat);
+    const newUser = new User(fname, uname, email, psw);
     UserList.push(newUser);
 }
 
+const user1 = new User('Maya Lifshitz', 'mali', 'maya@gmail.com', '12345678!');
+const user2 = new User('Dana Cohen', 'daco', 'dana@walla.com', '11223344?');
+const user3 = new User('Noy Kalifa', 'noka', 'noy123@hotmail.com', '!?987654321');
 
-//check if a user exists
-let userExists = document.querySelector('#signupbtn')
-userExists.addEventListener('click', (e) => {
-    if (typeof userExists != "undefined") {
-        return true;
-    } else {
-        return false;
-    }
-})
-
-function containsUser(obj, list) {
-    var i;
-    for (i = 0; i < list.length; i++) {
-        if (list[i] === obj) {
-            return true;
-        }
-    }
-
-    return false;
-}
+UserList.push(user1);
+UserList.push(user2);
+UserList.push(user3);
 
 
-// var navItems = document.querySelectorAll(".nav");
-// for (var i = 0; i < navItems.length; i++) {
-//    navItems[i].addEventListener("click", function() {
-//       this.classList.add("active");
-//    });
-// }
 
-
+//Class Rate
 class Rate {
     constructor(pname, cleanliness, FQuality, SQuality, VForMoney, review) {
         this.pname = pname;
@@ -148,27 +113,22 @@ class Rate {
     }
 }
 
+RateList = [];
 
-//Nav li
+var rateForm = document.querySelector("rate");
+rateForm.onsubmit = function () {
+    let Cleanliness = document.getElementById('cleanliness').value;
+    let FoodQuality = document.getElementById('FQuality').value;
+    let ServiceQuality = document.getElementById('SQuality').value;
+    let ValueForMoney = document.getElementById('VForMoney').value;
 
-// var d = new Date(); //gets the current date and time
-//
-// var currentPage = window.location; //file location and path name that contains the file name
-//
-// var currentPage = window.location.pathname; //gets the path name of the file
-//
-// const activePage = document.querySelectorAll('nav a').forEach(
-//     link=>{
-//         if(link.href.includes(`${currentPage}`)){
-//             link.classList.add("active");
-//         }
-//     }
-// );
-//
-// console.log(activePage);
+    const newRate = new User(Cleanliness, FoodQuality, ServiceQuality, ValueForMoney);
+    RateList.push(newRate);
+}
 
 
-//add a new place - if closed remove time option
+
+//Add a new place - if closed remove time option
 
 let closedCheckBox = document.querySelector('#closed')
 closedCheckBox.addEventListener('click', (e) => {
@@ -192,30 +152,35 @@ const showTimeInput = (className) => {
     }
 }
 
+//
+// //Sign in - add new option on nav bar when logged in
+//
+// let addMenuOption = document.querySelector('#signin')
+// addMenuOption.addEventListener('click', (e) => {
+//     let addToMenu = document.querySelectorAll('.addToMenu');
+//     if (addMenuOption.checked != null) {
+//         showNewMenuOption(addToMenu)
+//     } else {
+//         removeNewMenuOption(addToMenu)
+//     }
+// })
+// const removeNewMenuOption = (className) => {
+//     for (let i = 0; i < className.length; i++) {
+//         className[i].style.display = "none";
+//
+//     }
+//
+// }
+// const showNewMenuOption = (className) => {
+//     for (let i = 0; i < className.length; i++) {
+//         className[i].style.display = "block";
+//     }
+//
+// }
+//
+// // document.getElementById(signin).addEventListener('click', showNewMenuOption)
 
-//sign in - add new option on nav bar when logged in
 
-let addMenuOption = document.querySelector('#signin')
-addMenuOption.addEventListener('click', (e) => {
-    let addToMenu = document.querySelectorAll('.addToMenu');
-    if (addMenuOption.checked != null) {
-        showNewMenuOption(addToMenu)
-    } else {
-        removeNewMenuOption(addToMenu)
-    }
-})
-const removeNewMenuOption = (className) => {
-    for (let i = 0; i < className.length; i++) {
-        className[i].style.display = "none";
+//Validations
 
-    }
 
-}
-const showNewMenuOption = (className) => {
-    for (let i = 0; i < className.length; i++) {
-        className[i].style.display = "block";
-    }
-
-}
-
-// document.getElementById(signin).addEventListener('click', showNewMenuOption)

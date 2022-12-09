@@ -41,6 +41,7 @@ nav a
 	padding: 10px;
 }
 
+/*Shows on which page the user is*/
 .active {
   background: #303b37;
 	color: white;
