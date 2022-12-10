@@ -1,69 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<title>Find a Place</title>
-		<link rel="stylesheet" href="../static/Project.css">
-		<script defer src="../static/Project.js"></script>
-	</head>
-	<body class="body">
-		<nav>
-			<ul>
-				<li><a href="HomePage.html" >Home Page</a></li>
-				<li><a href="FindPlacePage.html" >Where to eat</a></li>
-				<li><a href="RestaurantCoffePage.html">Restaurants/Coffee Shops</a></li>
-				<li><a href="SignInPage.html" >Sign In</a></li>
-				<li><a href="SignUpPage.html">Sign Up</a></li>
-			</ul>
-		</nav>
-		<div>
-			<h1>VDine</h1>
-			<h2>Eat, Drink, Vegan, Repeat</h2>
-		</div>
-		<form class="findPlace">
-				<h4>Where should I eat next?</h4>
-				<br>
-				<p>
-					Please fill in this form to find the place to eat there :)
-				</p>
-				<hr>
-				<div class="radio">
-					<label>
-						<input type="checkbox" checked="checked" name="remember">Restaurant
-						<input type="checkbox" checked="checked" name="remember">Coffee shop
-					</label>
-				</div>
-				<label for="cname"><b>City</b></label>
-				<select class="input" name="places" id="places" required>
-					<option value="Haifa">Haifa, Israel</option>
-					<option value="TelAviv">Tel Aviv, Israel</option>
-					<option value="Modiin">Modi'in, Israel</option>
-					<option value="NewYork">New York, New York</option>
-					<option value="AlpeD'huez">Alpe D'huez, France</option>
-					<option value="Dolomites">Dolomites, France</option>
-					<option value="Barcelona">Barcelona, Spain</option>
-				</select>
-				<div class="clearfix">
-					<input class="button" type="submit" value="Search"></input>
-				</div>
+<head>
+    <meta charset="UTF-8">
+    <title>Find a Place</title>
+    <link rel="stylesheet" href="../static/Project.css">
+    <script defer src="../static/Project.js"></script>
+</head>
+<body class="body">
+<nav>
+    <ul>
+        <li><a href="HomePage.html">Home Page</a></li>
+        <li><a href="FindPlacePage.html">Where to eat</a></li>
+        <li><a href="Restaurants.html">Restaurants/Coffee Shops</a></li>
+        <li><a href="SignInPage.html">Sign In</a></li>
+        <li><a href="SignUpPage.html">Sign Up</a></li>
+        <li><a class="addToMenu" href="AddNewPlacePage.html">Add a new place</a></li>
+        <li><a class="addToMenu" href="RatePage.html">Rate</a></li>
+    </ul>
+</nav>
+<div>
+    <h1>VDine</h1>
+    <h2>Eat, Drink, Vegan, Repeat</h2>
+</div>
+<form class="findPlace">
+    <h4>Where should I eat next?</h4>
+    <br>
+    <p>
+        Please fill in this form to find the place to eat there :)
+    </p>
+    <hr>
+    <!--				<div class="radio">-->
+    <!--					<label>-->
+    <!--						<input type="checkbox" name="remember">Restaurant-->
+    <!--						<input type="checkbox" name="remember">Coffee shop-->
+    <!--					</label>-->
+    <!--				</div>-->
+    <label for="cname"><b>City</b></label>
+    <select class="input" name="places" id="places" required>
+        <option value="Haifa">Haifa, Israel</option>
+        <option value="TelAviv">Tel Aviv, Israel</option>
+        <option value="Modiin">Modi'in, Israel</option>
+        <option value="NewYork">New York, New York</option>
+        <option value="AlpeD'huez">Alpe D'huez, France</option>
+        <option value="Dolomites">Dolomites, France</option>
+        <option value="Barcelona">Barcelona, Spain</option>
+    </select>
+    <br>
+    <div>
+        <input class="button" type="submit" value="Search"></input>
+    </div>
 
-		</form>
+</form>
 
-	<footer class="footer">
-			<div class="effect social">
-				<div class="buttons">
-					<a href="#" class="fb" title="Join us on Facebook"><img src="../static/facebook.jpeg"></a>
-					<a href="#" class="insta" title="Join us on Instagram"><img src="../static/instagram.jpeg"></a>
-					<a href="#" class="in" title="Join us on Linked In"><img src="../static/linkedin.jpeg"></a>
-				</div>
-			</div>
-			<p>
-				<a href="#">Contact Us</a>
-				<br>
-				<a href="#" >Terms & Privacy Policy</a>
-			<br>
-			VDine © 2022
-			<p>
-		</footer>
-	</body>
+<footer class="footer">
+    <div class="effect social">
+        <div class="buttons">
+            <a href="#" class="fb" title="Join us on Facebook"><img src="../static/facebook.jpeg"></a>
+            <a href="#" class="insta" title="Join us on Instagram"><img src="../static/instagram.jpeg"></a>
+            <a href="#" class="in" title="Join us on Linked In"><img src="../static/linkedin.jpeg"></a>
+        </div>
+    </div>
+    <p>
+        <a href="#">Contact Us</a>
+        <br>
+        <a href="#">Terms & Privacy Policy</a>
+        <br>
+        VDine © 2022
+    <p>
+</footer>
+</body>
 </html>

@@ -12,6 +12,17 @@ const activePage = document.querySelectorAll("nav a").forEach(
 console.log(activePage);
 
 
+//Show password
+
+function showPassword() {
+  var x = document.getElementById('psw');
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+
 //Class Place
 class Places {
     constructor(name, street, city, googleSite, openHours, contact) {
@@ -108,16 +119,6 @@ UserList.push(user3)
 
 console.log(UserList);
 
-// let signUpForm = document.querySelector("sinUpForm");
-// signUpForm.onsubmit = function () {
-//     let fname = document.getElementById('fname').value;
-//     let uname = document.getElementById('uname').value;
-//     let email = document.getElementById('city').value;
-//     let psw = document.getElementById('psw').value;
-//
-//     const newUser = new User(fname, uname, email, psw);
-//     UserList.push(newUser);
-// }
 
 
 //Class Rate
@@ -145,18 +146,6 @@ RateList.push(rate3)
 console.log(RateList);
 
 
-// RateList = [];
-//
-// let rateForm = document.querySelector("rate");
-// rateForm.onsubmit = function () {
-//     let Cleanliness = document.getElementById('cleanliness').value;
-//     let FoodQuality = document.getElementById('FQuality').value;
-//     let ServiceQuality = document.getElementById('SQuality').value;
-//     let ValueForMoney = document.getElementById('VForMoney').value;
-//
-//     const newRate = new User(Cleanliness, FoodQuality, ServiceQuality, ValueForMoney);
-//     RateList.push(newRate);
-// }
 
 
 // document.getElementById(signin).addEventListener('click', showNewMenuOption)
@@ -204,14 +193,14 @@ console.log(RateList);
 //Add a new place validation
 //
 // function addPlaceFormValidation() {
-//     let palceName = document.forms["addPlaceForm"]["rnam"].value;
+//     let placeName = document.forms["addPlaceForm"]["rnam"].value;
 //     let street = document.forms["addPlaceForm"]["street"].value;
 //     let city = document.forms["addPlaceForm"]["city"].value;
 //     let site = document.forms["addPlaceForm"]["site"].value;
 //     let currentTime = new Date();
 //
 //
-//     if (!palceName.match(/^[a-zA-Z]*$/)) {
+//     if (!placeName.match(/^[a-zA-Z]*$/)) {
 //         alert("Invalid Place name, please type again in English only")
 //         return false;
 //     }
@@ -219,11 +208,11 @@ console.log(RateList);
 //         alert("Invalid last name, please type again in English only")
 //         return false;
 //     }
-//     if (palceName.length < 2) {
+//     if (placeName.length < 2) {
 //         alert("The name is too short")
 //         return false;
 //     }
-//     if (palceName.length > 15) {
+//     if (placeName.length > 15) {
 //         alert("The name is too long")
 //         return false;
 //     }
@@ -246,151 +235,49 @@ console.log(RateList);
 // }
 
 
-const SignInForm = document.querySelector('#signin');
-const UName = document.querySelector('#uname');
-const Psw = document.querySelector('#psw');
-const msg = document.querySelector('.msg');
 
 
-//SignIn Validation
-// let SignInForm = document.querySelector('#signin');
-SignInForm.addEventListener('click', (e) => {
-    e.preventDefault();
-    if (UName.value === '' || UName.value == null || Psw.value === '' || Psw.value == null) {
-        msg.classList.add('error');
-        setTimeout(() => {
-            msg.innerHTML = 'Please enter all fields';
-            msg.classList.remove('error')
-        }, 500)
+
+
+
+
+
+
+
+//Add a new place - if closed remove time option
+
+const closedCheckBox = document.querySelector('#closed')
+closedCheckBox.addEventListener('click', (e) => {
+    let saturday = document.querySelectorAll('.saturday');
+    if (closedCheckBox.checked === true) {
+        removeTimeInput(saturday)
     } else {
-        let user = 0;
-        for (let i = 0; i < UserList.length; i++) {
-            if (UserList[i].getUname() === UName.value && UserList[i].getPsw() === Psw.value) {
-                alert('Signed In');
-                window.location.href = 'HomePage.html';
-                user = 1;
-            }
-            if (user === 0) {
-                alert('User doest exists');
-            }
-        }
-        //Sign in - add new option on nav bar when logged in
-
-        const addMenuOption = document.querySelector('#signin')
-        addMenuOption.addEventListener('click', (e) => {
-            let addToMenu = document.querySelectorAll('.addToMenu');
-            if (user === 1) {
-                showNewMenuOption(addToMenu)
-            } else {
-                removeNewMenuOption(addToMenu)
-            }
-        })
-        const removeNewMenuOption = (className) => {
-            for (let i = 0; i < className.length; i++) {
-                className[i].style.display = "none";
-
-            }
-
-        }
-        const showNewMenuOption = (className) => {
-            for (let i = 0; i < className.length; i++) {
-                className[i].style.display = "block";
-            }
-
-        }
-
+        showTimeInput(saturday)
     }
 })
 
+const removeTimeInput = (className) => {
+    for (let i = 0; i < className.length; i++) {
+        className[i].style.display = "none";
 
-
-const SignUpForm = document.querySelector('#signUp');
-const FullName = document.querySelector('#FName');
-const UserName = document.querySelector('#uname');
-const Email = document.querySelector('#email');
-const Password = document.querySelector('#psw');
-const PasswordRepeat = document.querySelector('#pswRepeat');
-const msg = document.querySelector('.msg');
-
-
-//SignUp Validation
-// let SignUpForm = document.querySelector('#signup')
-SignUpForm.addEventListener('click', (e) => {
-    e.preventDefault();
-    if(FullName.value==='' || FullName.value==null){
-        msg.classList.add('error');
-        setTimeout(() =>{
-            msg.innerHTML='Name is required';
-            msg.classList.remove('error')
-            }, 2000)
     }
 
-    if(UserName.value==='' || UserName.value==null){
-        msg.classList.add('error');
-        setTimeout(() =>{
-            msg.innerHTML='User name is required';
-            msg.classList.remove('error')
-            }, 2000)
+}
+const showTimeInput = (className) => {
+    for (let i = 0; i < className.length; i++) {
+        className[i].style.display = "block";
     }
+}
 
-    if(Email.value==='' || Email.value==null){
-        alert('Email is required')
-    }
 
-    if(Password.value==='' || Password.value==null){
-        alert('Password  is required')
-    }
-
-    if(PasswordRepeat.value==='' || PasswordRepeat.value==null){
-        alert('User name is required')
-    }
-
-    if(Password.value.length<8){
-        alert('Password must be at least 8 characters');
-    }
-
-    if(Password.value.length>20) {
-        alert('Password must be less than 20 characters');
-    }
-
-    if(Password != '' && PasswordRepeat != '' && Password != PasswordRepeat){
-        alert('Please check that both passwords are the same');
-    }
-
+//Filter places by location
+const filterPlaces = PlaceList.filter(place => {
+    return place.getCity();
 })
 
-
-//
-//
-// //Add a new place - if closed remove time option
-//
-// let closedCheckBox = document.querySelector('#closed')
-// closedCheckBox.addEventListener('click', (e) => {
-//     let saturday = document.querySelectorAll('.saturday');
-//     if (closedCheckBox.checked === true) {
-//         removeTimeInput(saturday)
-//     } else {
-//         showTimeInput(saturday)
-//     }
-// })
-//
-// const removeTimeInput = (className) => {
-//     for (let i = 0; i < className.length; i++) {
-//         className[i].style.display = "none";
-//
-//     }
-//
-// }
-// const showTimeInput = (className) => {
-//     for (let i = 0; i < className.length; i++) {
-//         className[i].style.display = "block";
-//     }
-// }
+console.log(filterPlaces);
 
 
-// //Filter places by location
-// const filterPlaces = PlaceList.filter(place => {
-//     return place.getCity();
-// })
-//
-// console.log(filterPlaces);
+
+//Show and hide nav bar options
+

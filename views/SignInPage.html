@@ -5,16 +5,18 @@
     <title>Sign In</title>
     <link rel="stylesheet" href="../static/Project.css">
     <script defer src="../static/Project.js"></script>
-
+    <script defer src="../static/SignInValidation.js"></script>
 </head>
 <body class="body">
 <nav>
     <ul>
         <li><a href="HomePage.html">Home Page</a></li>
         <li><a href="FindPlacePage.html">Where to eat</a></li>
-        <li><a href="RestaurantCoffePage.html">Restaurants/Coffee Shops</a></li>
+        <li><a href="Restaurants.html">Restaurants/Coffee Shops</a></li>
         <li><a href="SignInPage.html">Sign In</a></li>
         <li><a href="SignUpPage.html">Sign Up</a></li>
+        <li><a class="addToMenu" href="AddNewPlacePage.html">Add a new place</a></li>
+        <li><a class="addToMenu" href="RatePage.html">Rate</a></li>
     </ul>
 </nav>
 <div>
@@ -28,14 +30,17 @@
         Please fill in this form to sign in :)
     </p>
     <hr>
+    <div class="msg"></div>
     <label for="uname"><b>User Name</b></label>
     <input class="input" type="text" placeholder="Enter user name" name="uname" id="uname">
-    <div class="msg"></div>
     <label for="psw"><b>Password</b></label>
     <input class="input" type="password" placeholder="Enter Password" name="psw" id="psw">
+    <div>
+        <input type="checkbox" id="showPsw" placeholder="Show Password" onclick="showPassword()">Show Password
+    </div>
+    <br>
     <div class="clearfix">
-        <a href="HomePage.html"><input class="button" type="submit" value="Sign In" id="signin"
-                                       ></input></a>
+        <a href="HomePage.html"><input class="button" type="submit" value="Sign In" id="signin"></input></a>
     </div>
 </form>
 <footer class="footer">

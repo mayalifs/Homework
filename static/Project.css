@@ -229,17 +229,13 @@ h4
 	background-color: lavender;
 }
 
-.subconbutton
-{
-	color: white;
-	text-decoration: none;
-	/*text-transform: uppercase;
-	*/
-	/*font-size: 12px;
-	*/
-	/*padding: 10px;
-	*/
-}
+/*.subconbutton*/
+/*{*/
+/*	color: white;*/
+/*	text-decoration: none;*/
+
+/*}*/
+
 
 /*****************SignUp******************/
 *
@@ -268,15 +264,15 @@ form
 /* Set a style for all buttons */
 .button
 {
-	/*display: grid;*/
-	/*align-items: center;*/
+	display: grid;
 	background-color: lavender;
 	color: black;
-	padding: 14px 20px;
-	margin: 8px 0;
+	padding: 12px 20px;
+	margin: auto;
+	/*margin: 8px 0;*/
 	border: none;
 	cursor: pointer;
-	width: 100%;
+	width: 25%;
 	opacity: 0.9;
 	border-radius: 15px;
 }
@@ -286,15 +282,15 @@ form
 	opacity:1;
 }
 
-.clearfix
-{
-	/*display: grid;*/
-	/*justify-content: center;*/
-	width: 25%;
-	color: lavender;
-	/*margin-right: 250vh;*/
-	margin-left: 35%;
-}
+/*.clearfix*/
+/*{*/
+/*	display: grid;*/
+/*	!*justify-content: center;*!*/
+/*	width: 25%;*/
+/*	color: lavender;*/
+/*	!*margin-right: 250vh;*!*/
+/*	margin-left: 35%;*/
+/*}*/
 
 /* Clear floats */
 .clearfix::after
@@ -577,5 +573,7 @@ input[type="time" i]
 */
 
 
-/*.msg{
-*/
+.msg{
+	color: crimson;
+	background-color: lavender;
+}
