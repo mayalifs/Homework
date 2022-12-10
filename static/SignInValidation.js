@@ -12,6 +12,7 @@ SignInForm.addEventListener('click', (e) => {
     if (UName.value === '' || UName.value == null || Psw.value === '' || Psw.value == null) {
         msg.innerHTML = 'Please enter all fields';
         setTimeout(() => msg.remove(), 2000)
+        return false;
 
     } else {
         let user = 0;
@@ -25,30 +26,34 @@ SignInForm.addEventListener('click', (e) => {
                 alert('User doest exists');
             }
         }
-        //Sign in - add new option on nav bar when logged in
-
-        const addMenuOption = document.querySelector('#signin')
-        addMenuOption.addEventListener('click', (e) => {
-            let addToMenu = document.querySelectorAll('.addToMenu');
-            if (user === 1) {
-                showNewMenuOption(addToMenu)
-            } else {
-                removeNewMenuOption(addToMenu)
-            }
-        })
-        const removeNewMenuOption = (className) => {
-            for (let i = 0; i < className.length; i++) {
-                className[i].style.display = "none";
-
-            }
-
-        }
-        const showNewMenuOption = (className) => {
-            for (let i = 0; i < className.length; i++) {
-                className[i].style.display = "block";
-            }
-
-        }
+        // //Sign in - add new option on nav bar when logged in
+        //
+        // const addMenuOption = document.querySelector('#signin')
+        // addMenuOption.addEventListener('click', (e) => {
+        //     let addToMenu = document.querySelectorAll('.addToMenu');
+        //     if (user === 1) {
+        //         showNewMenuOption(addToMenu)
+        //     } else {
+        //         removeNewMenuOption(addToMenu)
+        //     }
+        // })
+        // const removeNewMenuOption = (className) => {
+        //     for (let i = 0; i < className.length; i++) {
+        //         className[i].style.display = "none";
+        //
+        //     }
+        //
+        // }
+        // const showNewMenuOption = (className) => {
+        //     for (let i = 0; i < className.length; i++) {
+        //         className[i].style.display = "block";
+        //     }
+        //
+        // }
 
     }
 })
+
+// function Reset(){
+//       window.location.reload();
+//     }

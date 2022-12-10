@@ -576,4 +576,6 @@ input[type="time" i]
 .msg{
 	color: crimson;
 	background-color: lavender;
+	border-radius: 5px;
+	text-align: center;
 }
