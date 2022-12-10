@@ -517,6 +517,8 @@ input[type="time" i]
 {
 	display: grid;
 	grid-template-columns: repeat(3, 350px);
+	/*grid-column-start: auto;*/
+	/*grid-column-end: auto;*/
 	align-items: center;
 	justify-content: space-around;
 	gap: 50px;
@@ -572,4 +574,8 @@ input[type="time" i]
 	*/
 /*}
 
+*/
+
+
+/*.msg{
 */

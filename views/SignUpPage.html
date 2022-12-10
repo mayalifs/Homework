@@ -20,27 +20,29 @@
     <h1>VDine</h1>
     <h2>Eat, Drink, Vegan, Repeat</h2>
 </div>
-<form class="sinUpForm">
+<form class="signUpForm">
     <h4>Sign Up</h4>
     <br>
     <p>
         Please fill in this form to sign up :)
     </p>
     <hr>
-    <label for="fname"><b>Full Name</b></label>
-    <input class="input" type="text" placeholder="Enter full name" name="fnam" id="fname" required>
+    <label for="fName"><b>Full Name</b></label>
+    <input class="input" type="text" placeholder="Enter full name" name="FName" id="fName" required>
+    <div class="msg"></div>
     <label for="uname"><b>User Name</b></label>
     <input class="input" type="text" placeholder="Enter user name" name="uname" id="uname" required>
     <label for="email"><b>Email</b></label>
     <input class="input" type="text" placeholder="Enter Email" name="email" id="email" required>
     <label for="psw"><b>Password</b></label>
     <input class="input" type="password" placeholder="Enter Password" name="psw" id="psw" required>
-<!--    <label for="pswrepeat"><b>Confirm Password</b></label>-->
-<!--    <input class="input" type="password" placeholder="Confirm Password" name="psw-repeat" id="pswrepeat" required>-->
+    <label for="pswrepeat"><b>Confirm Password</b></label>
+    <input class="input" type="password" placeholder="Confirm Password" name="psw-repeat" id="pswRepeat" required>
     <div class="clearfix">
-        <a href="HomePage.html"><input class="button" type="submit" value="Sign Up" id="signupbtn" onsubmit="sinUpFormForm()"></input></a>
+        <a href="HomePage.html"><input class="button" type="submit" value="Sign Up" id="signup"
+                                       onsubmit="sinUpFormForm()"></input></a>
         <br>
-<!--        <input class="button" type="submit" value="Cancel" id="cancelbtn"></input>-->
+        <!--        <input class="button" type="submit" value="Cancel" id="cancelbtn"></input>-->
     </div>
 
 </form>
