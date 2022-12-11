@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Find a Place</title>
     <link rel="stylesheet" href="../static/Project.css">
     <script defer src="../static/Project.js"></script>
+    <script defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAy7PfyyZh8RhhVqlTVgbnfMkBlwmsFst4&libraries=places&callback=initMap"
+            async></script>
 </head>
 <body class="body">
 <nav>
@@ -25,29 +28,32 @@
 <form class="findPlace">
     <h4>Where should I eat next?</h4>
     <br>
+    <div id="map"></div>
     <p>
         Please fill in this form to find the place to eat there :)
     </p>
     <hr>
-    <!--				<div class="radio">-->
-    <!--					<label>-->
-    <!--						<input type="checkbox" name="remember">Restaurant-->
-    <!--						<input type="checkbox" name="remember">Coffee shop-->
-    <!--					</label>-->
-    <!--				</div>-->
+    <!--    <label for="cname"><b>City and State</b></label>-->
+    <!--    <div id="PlacesDropDown">-->
+    <!--        <select class="input" name="places" id="autocomplete"  type="text" required></select>-->
+    <!--    </div>-->
+
+
     <label for="cname"><b>City</b></label>
-    <select class="input" name="places" id="places" required>
-        <option value="Haifa">Haifa, Israel</option>
-        <option value="TelAviv">Tel Aviv, Israel</option>
-        <option value="Modiin">Modi'in, Israel</option>
-        <option value="NewYork">New York, New York</option>
-        <option value="AlpeD'huez">Alpe D'huez, France</option>
-        <option value="Dolomites">Dolomites, France</option>
-        <option value="Barcelona">Barcelona, Spain</option>
-    </select>
+    <div id="DropDown">
+        <select class="input" name="places" id="places" required>
+            <option value="Haifa">Haifa, Israel</option>
+            <option value="TelAviv">Tel Aviv, Israel</option>
+            <option value="Modiin">Modi'in, Israel</option>
+            <option value="BeerSheva">Beer Sheva, Israel</option>
+            <option value="RamatGan">Ramat Gan, Israel</option>
+            <option value="Jerusalem">Jerusalem, Israel</option>
+            <option value="Eilat">Eilat, Israel</option>
+        </select>
+    </div>
     <br>
     <div>
-        <input class="button" type="submit" value="Search"></input>
+        <a href="Restaurants.html"><input class="button" type="submit" value="Search" id="search"></input></a>
     </div>
 
 </form>

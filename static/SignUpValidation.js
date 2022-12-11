@@ -15,25 +15,25 @@ SignUpForm.addEventListener('click', (e) => {
 
     if (atLeastOneLetterAndSpace(FullName) === false) {
         msg.innerHTML = 'Please enter full name';
-        setTimeout(() => msg.remove(), 2000)
+        setTimeout(() => msg.remove(), 3000)
         return false;
     }
 
     if (Password.value.length < 8) {
         msg.innerHTML = 'Password must be at least 8 characters';
-        setTimeout(() => msg.remove(), 2000)
+        setTimeout(() => msg.remove(), 3000)
         return false;
     }
 
     if (Password.value.length > 15) {
         msg.innerHTML = 'Password must be less than 15 characters';
-        setTimeout(() => msg.remove(), 2000)
+        setTimeout(() => msg.remove(), 3000)
         return false;
     }
 
     if (Password !== '' && PasswordRepeat !== '' && Password !== PasswordRepeat) {
         msg.innerHTML = 'Please check that both passwords are the same';
-        setTimeout(() => msg.remove(), 2000)
+        setTimeout(() => msg.remove(), 3000)
         return false;
     } else {
         alert('You are now signed In');

@@ -11,15 +11,21 @@ NewPlaceForm.addEventListener('click', (e) => {
     if (Name.value === '' || Name.value == null || Street.value === '' || Street.value == null || City.value === '' || City.value == null
         || GoogleSite.value === '' || GoogleSite.value == null) {
         msg.innerHTML = 'Please enter all fields';
-        setTimeout(() => msg.remove(), 2000)
+        setTimeout(() => msg.remove(), 3000)
         return false;
     }
+    for (let i = 0; i < PlaceList.length(); i++) {
+        if (PlaceList[i].getName() === UName.value) {
+            msg.innerHTML = 'Restaurant already exists';
+            setTimeout(() => msg.remove(), 3000)
+            return false;
+        }
+    }
 
-    if (PlaceList[i].getName() === UName.value) {
-        msg.innerHTML = 'Restaurant already exists';
-        setTimeout(() => msg.remove(), 2000)
+    if (isValidUrl(GoogleSite) === false) {
+        msg.innerHTML = 'Please enter a valid URL';
+        setTimeout(() => msg.remove(), 3000)
         return false;
-
     } else {
         let place = 0;
         for (let i = 0; i < PlaceList.length; i++) {
@@ -34,3 +40,13 @@ NewPlaceForm.addEventListener('click', (e) => {
         }
     }
 })
+
+
+function isValidUrl(string) {
+    try {
+        new URL(string);
+        return true;
+    } catch (err) {
+        return false;
+    }
+}

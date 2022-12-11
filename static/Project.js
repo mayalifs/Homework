@@ -15,12 +15,12 @@ console.log(activePage);
 //Show password
 
 function showPassword() {
-  var x = document.getElementById('psw');
-  if (x.type === "password") {
-    x.type = "text";
-  } else {
-    x.type = "password";
-  }
+    var x = document.getElementById('psw');
+    if (x.type === "password") {
+        x.type = "text";
+    } else {
+        x.type = "password";
+    }
 }
 
 //Class Place
@@ -120,7 +120,6 @@ UserList.push(user3)
 console.log(UserList);
 
 
-
 //Class Rate
 class Rate {
     constructor(pname, cleanliness, FQuality, SQuality, VForMoney, review) {
@@ -146,129 +145,84 @@ RateList.push(rate3)
 console.log(RateList);
 
 
-
-
 // document.getElementById(signin).addEventListener('click', showNewMenuOption)
 
 
 //GeoLocation
 
-function GetLocation() {
-    console.log(navigator.geolocation);
-    if (navigator.geolocation) {
-        console.log("in get location");
-        navigator.geolocation.getCurrentPosition(showPosition);
-    } else {
-        document.getElementById("p").innerHTML = "Geo;location is not supported";
-    }
-};
 
-function showPosition(position) {
-    var x = document.getElementById('p');
-    var y = document.getElementById("BTN");
-    x.innerHTML = "Latitude: " + position.coords.latitude
-    + "longtitide: " + position.coords. longitude;
-}
+//AutoComplete Places Location
+
+// let autocomplete;
+// function initAutocomplete(){
+//     autocomplete = new google.maps.places.Autocomplete(
+//         document.getElementById('autocomplete'),
+//         {
+//             type: ['establishment'],
+//             componentRestrictions: {'country': ['AU']},
+//             fields: ['place_id', 'geometry', 'name']
+//         });
+// }
+
+
+// function GetLocation() {
+//     console.log(navigator.geolocation);
+//     if (navigator.geolocation) {
+//         console.log("in get location");
+//         navigator.geolocation.getCurrentPosition(showPosition);
+//     } else {
+//         document.getElementById("places").innerHTML = "Geo;location is not supported";
+//     }
+// };
+//
+// function showPosition(position) {
+//     var x = document.getElementById("places");
+//     var y = document.getElementById("search");
+//     x.innerHTML = "Latitude: " + position.coords.latitude
+//     + "longtitide: " + position.coords. longitude;
+// }
 
 
 //Greeting according to the time
 
-// function MyGreeting() {
-//     console.log("im in my greeting");
-//     var d = new Date;
-//     var t = d.getUTCHours();
-//     if (t < 12) {
-//         document.getElementById("demo").innerHTML = "Good Morning";
-//     } else if (t < 18) {
-//         document.getElementById("demo").innerHTML = "Good Afternoon";
-//     } else {
-//         document.getElementById("demo").innerHTML = "Good Evening"
-//     }
-// }
+const greeting = document.getElementById("greeting");
+const hour = new Date().getHours();
+const welcomeTypes = ["Good Morning :)", "Good Afternoon :)", "Good Evening :)"];
+let welcomeText = "";
 
+if (hour < 12) welcomeText = welcomeTypes[0];
+else if (hour < 18) welcomeText = welcomeTypes[1];
+else welcomeText = welcomeTypes[2];
 
-//Validations
+greeting.innerHTML = welcomeText;
 
-
-
-//Add a new place validation
 //
-// function addPlaceFormValidation() {
-//     let placeName = document.forms["addPlaceForm"]["rnam"].value;
-//     let street = document.forms["addPlaceForm"]["street"].value;
-//     let city = document.forms["addPlaceForm"]["city"].value;
-//     let site = document.forms["addPlaceForm"]["site"].value;
-//     let currentTime = new Date();
-//
-//
-//     if (!placeName.match(/^[a-zA-Z]*$/)) {
-//         alert("Invalid Place name, please type again in English only")
-//         return false;
-//     }
-//     if (!userName.match(/^[a-zA-Z]*$/) && !userName.match(/^[a-zA-Z]+ [a-zA-Z]+$/) && !userName.match(/^[a-zA-Z]+ [a-zA-Z]+ [a-zA-Z]+$/)) {
-//         alert("Invalid last name, please type again in English only")
-//         return false;
-//     }
-//     if (placeName.length < 2) {
-//         alert("The name is too short")
-//         return false;
-//     }
-//     if (placeName.length > 15) {
-//         alert("The name is too long")
-//         return false;
-//     }
-//     if (userName.length < 2) {
-//         alert("Last name too short")
-//         return false;
-//     }
-//     if (email == "") {
-//         alert("Email is not valid")
-//         return false;
-//     }
-//     if (password.length < 8) {
-//         alert("Please enter password with minimum 8 chars ")
-//         return false;
-//     }
-//     if (password != '' && pswrepeat != '' && password != pswrepeat) {
-//         alert("Please ensure that you type your password correct in 2 places.")
-//         return false;
-//     }
-// }
-
-
-
-
-
-
-
-
-
 
 
 //Add a new place - if closed remove time option
 
-const closedCheckBox = document.querySelector('#closed')
-closedCheckBox.addEventListener('click', (e) => {
-    let saturday = document.querySelectorAll('.saturday');
-    if (closedCheckBox.checked === true) {
-        removeTimeInput(saturday)
-    } else {
-        showTimeInput(saturday)
-    }
-})
-
-const removeTimeInput = (className) => {
-    for (let i = 0; i < className.length; i++) {
-        className[i].style.display = "none";
-
-    }
-
-}
-const showTimeInput = (className) => {
-    for (let i = 0; i < className.length; i++) {
-        className[i].style.display = "block";
-    }
-}
+// const closedCheckBox = document.querySelector('#closed')
+//
+// closedCheckBox.addEventListener('click', (e) => {
+//     let saturday = document.querySelectorAll('.saturday');
+//     if (closedCheckBox.checked === true) {
+//         removeTimeInput(saturday)
+//     } else {
+//         showTimeInput(saturday)
+//     }
+// })
+//
+// const removeTimeInput = (className) => {
+//     for (let i = 0; i < className.length; i++) {
+//         className[i].style.display = "none";
+//
+//     }
+// }
+// const showTimeInput = (className) => {
+//     for (let i = 0; i < className.length; i++) {
+//         className[i].style.display = "block";
+//     }
+// }
 
 
 //Filter places by location
@@ -279,6 +233,29 @@ const filterPlaces = PlaceList.filter(place => {
 console.log(filterPlaces);
 
 
-
 //Show and hide nav bar options
+
+
+//
+
+function initMap() {
+    //Map options
+    var options = {
+        zoom: 8,
+        //Latitude and Longitude coordinates of Tel aviv
+        center: {lat: 32.109333, lng: -34.855499}
+    }
+    //New map
+    var map = new google.maps.Map(document.getElementById('map'), options);
+
+    //Add marker function
+    function assMarkers(coords) {
+        var marker = new google.maps.Marker({
+            //Latitude and Longitude coordinates of Haifa
+            position: coords,
+            map: map
+        });
+    }
+}
+
 

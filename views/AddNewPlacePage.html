@@ -5,6 +5,7 @@
     <title>Add a New Place</title>
     <link rel="stylesheet" href="../static/Project.css">
     <script defer src="../static/Project.js"></script>
+    <script defer src="../static/NewPlaceValidation.js"></script>
 </head>
 <body class="body">
 <nav>
@@ -44,7 +45,20 @@
     <label for="street"><b>Street</b></label>
     <input class="input" type="text" placeholder="Enter street number" name="street" id="street" required>
     <label for="city"><b>City</b></label>
-    <input class="input" type="text" placeholder="Enter city" name="city" id="city" required>
+    <div id="DropDown">
+    <select class="input" type="text" placeholder="Select city" name="city" id="city" required>
+
+<!--        <select class="input" name="places" id="places" required>-->
+            <option value="Haifa">Haifa, Israel</option>
+            <option value="TelAviv">Tel Aviv, Israel</option>
+            <option value="Modiin">Modi'in, Israel</option>
+            <option value="BeerSheva">Beer Sheva, Israel</option>
+            <option value="RamatGan">Ramat Gan, Israel</option>
+            <option value="Jerusalem">Jerusalem, Israel</option>
+            <option value="Eilat">Eilat, Israel</option>
+        </select>
+    </div>
+
     <label for="site"><b>Google site</b></label>
     <input class="input" type="text" placeholder="Enter google site" name="site" id="site" required>
     <!--            <label for="openH"><b>Open hours</b></label>-->
@@ -67,7 +81,7 @@
     <input class="input" type="password" placeholder="Enter contact number" name="contactN" id="contactN" required>
     <br>
     <div>
-        <input class="button" type="submit" value="Add" id="add"></input>
+        <input class="button" type="submit" value="Add" id="add" onclick=""></input>
     </div>
 </form>
 
