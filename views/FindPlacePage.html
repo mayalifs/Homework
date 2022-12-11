@@ -28,7 +28,6 @@
 <form class="findPlace">
     <h4>Where should I eat next?</h4>
     <br>
-    <div id="map"></div>
     <p>
         Please fill in this form to find the place to eat there :)
     </p>
@@ -39,18 +38,21 @@
     <!--    </div>-->
 
 
-    <label for="cname"><b>City</b></label>
-    <div id="DropDown">
-        <select class="input" name="places" id="places" required>
-            <option value="Haifa">Haifa, Israel</option>
-            <option value="TelAviv">Tel Aviv, Israel</option>
-            <option value="Modiin">Modi'in, Israel</option>
-            <option value="BeerSheva">Beer Sheva, Israel</option>
-            <option value="RamatGan">Ramat Gan, Israel</option>
-            <option value="Jerusalem">Jerusalem, Israel</option>
-            <option value="Eilat">Eilat, Israel</option>
-        </select>
-    </div>
+    <label for="cname"><b>Search for a city</b></label>
+<!--    <div id="DropDown">-->
+<!--        <select class="input" name="places" id="places" required>-->
+<!--            <option value="Haifa">Haifa, Israel</option>-->
+<!--            <option value="TelAviv">Tel Aviv, Israel</option>-->
+<!--            <option value="Modiin">Modi'in, Israel</option>-->
+<!--            <option value="BeerSheva">Beer Sheva, Israel</option>-->
+<!--            <option value="RamatGan">Ramat Gan, Israel</option>-->
+<!--            <option value="Jerusalem">Jerusalem, Israel</option>-->
+<!--            <option value="Eilat">Eilat, Israel</option>-->
+<!--        </select>-->
+<!--    </div>-->
+    <br>
+    <input class="input" id="autocomplete" placeholder="Enter a place" type="text" onclick="initAutocomplete()">
+    <div id="map"></div>
     <br>
     <div>
         <a href="Restaurants.html"><input class="button" type="submit" value="Search" id="search"></input></a>

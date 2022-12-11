@@ -10,6 +10,7 @@ NewPlaceForm.addEventListener('click', (e) => {
     e.preventDefault();
     if (Name.value === '' || Name.value == null || Street.value === '' || Street.value == null || City.value === '' || City.value == null
         || GoogleSite.value === '' || GoogleSite.value == null) {
+        toTop();
         msg.innerHTML = 'Please enter all fields';
         setTimeout(() => msg.remove(), 3000)
         return false;

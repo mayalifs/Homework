@@ -151,18 +151,7 @@ console.log(RateList);
 //GeoLocation
 
 
-//AutoComplete Places Location
 
-// let autocomplete;
-// function initAutocomplete(){
-//     autocomplete = new google.maps.places.Autocomplete(
-//         document.getElementById('autocomplete'),
-//         {
-//             type: ['establishment'],
-//             componentRestrictions: {'country': ['AU']},
-//             fields: ['place_id', 'geometry', 'name']
-//         });
-// }
 
 
 // function GetLocation() {
@@ -199,30 +188,7 @@ greeting.innerHTML = welcomeText;
 //
 
 
-//Add a new place - if closed remove time option
 
-// const closedCheckBox = document.querySelector('#closed')
-//
-// closedCheckBox.addEventListener('click', (e) => {
-//     let saturday = document.querySelectorAll('.saturday');
-//     if (closedCheckBox.checked === true) {
-//         removeTimeInput(saturday)
-//     } else {
-//         showTimeInput(saturday)
-//     }
-// })
-//
-// const removeTimeInput = (className) => {
-//     for (let i = 0; i < className.length; i++) {
-//         className[i].style.display = "none";
-//
-//     }
-// }
-// const showTimeInput = (className) => {
-//     for (let i = 0; i < className.length; i++) {
-//         className[i].style.display = "block";
-//     }
-// }
 
 
 //Filter places by location
@@ -230,10 +196,19 @@ const filterPlaces = PlaceList.filter(place => {
     return place.getCity();
 })
 
-console.log(filterPlaces);
+// console.log(filterPlaces);
 
 
 //Show and hide nav bar options
+
+
+
+
+
+
+
+//Get to the top of the page
+const toTop = () => window.scrollTo({top: 0, behavior: 'smooth'});
 
 
 //
@@ -243,13 +218,13 @@ function initMap() {
     var options = {
         zoom: 8,
         //Latitude and Longitude coordinates of Tel aviv
-        center: {lat: 32.109333, lng: -34.855499}
+        center: {lat: 31.465999, lng: -35.126000}
     }
     //New map
     var map = new google.maps.Map(document.getElementById('map'), options);
 
     //Add marker function
-    function assMarkers(coords) {
+    function addMarkers(coords) {
         var marker = new google.maps.Marker({
             //Latitude and Longitude coordinates of Haifa
             position: coords,
@@ -258,4 +233,61 @@ function initMap() {
     }
 }
 
+
+// AutoComplete Places Location
+
+let autocomplete;
+function initAutocomplete(){
+    autocomplete = new google.maps.places.Autocomplete(
+        document.getElementById('autocomplete'),
+        {
+            type: ['establishment'],
+            componentRestrictions: {'country': ['IL']},
+            fields: ['place_id', 'geometry', 'name']
+        });
+    autocomplete.addEventListener('click', onPlaceChanged());
+}
+
+function onPlaceChanged(){
+    var place = autocomplete.getPlace();
+
+    if(!place.geometry){
+    //User did not select a prediction; reset the input field
+        document.getElementById('autocomplete'.placeholder = 'Enter a place');
+    } else {
+    //Display details about the valid place
+        document.getElementById('details').innerHTML = place.name;
+    }
+}
+
+
+
+
+
+
+
+// Add a new place - if closed remove time option
+
+const closedCheckBox = document.querySelector('#closed')
+
+closedCheckBox.addEventListener('click', (e) => {
+    let saturday = document.querySelectorAll('.saturday');
+    if (closedCheckBox.checked === true) {
+        removeTimeInput(saturday)
+    } else {
+        showTimeInput(saturday)
+    }
+})
+
+const removeTimeInput = (className) => {
+    for (let i = 0; i < className.length; i++) {
+        className[i].style.display = "none";
+
+    }
+}
+const showTimeInput = (className) => {
+    for (let i = 0; i < className.length; i++) {
+        className[i].style.display = "block";
+    }
+}
 
