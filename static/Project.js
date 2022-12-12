@@ -216,12 +216,17 @@ const toTop = () => window.scrollTo({top: 0, behavior: 'smooth'});
 function initMap() {
     //Map options
     var options = {
-        zoom: 8,
+        zoom: 12,
         //Latitude and Longitude coordinates of Tel aviv
         center: {lat: 32.109333, lng: 34.855499}
     }
     //New map
     var map = new google.maps.Map(document.getElementById('map'), options);
+
+
+    addMarkers({lat:32.06320275037311, lng:34.76837102051949})
+    addMarkers({lat:32.06320275037311, lng:34.77492051807076})
+    addMarkers({lat:32.073653185202765, lng:34.774821078067326})
 
     //Add marker function
     function addMarkers(coords) {
@@ -231,6 +236,9 @@ function initMap() {
             map: map
         });
     }
+
+
+
 }
 
 
@@ -250,7 +258,6 @@ function initAutocomplete(){
 
 function onPlaceChanged(){
     var place = autocomplete.getPlace();
-
     if(!place.geometry){
     //User did not select a prediction; reset the input field
         document.getElementById('autocomplete'.placeholder = 'Enter a place');
@@ -259,6 +266,13 @@ function onPlaceChanged(){
         document.getElementById('details').innerHTML = place.name;
     }
 }
+
+
+
+
+
+//Find a place by location
+
 
 
 
