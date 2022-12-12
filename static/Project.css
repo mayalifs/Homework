@@ -129,10 +129,10 @@ h4 {
     */
 }
 
-.effect {
-    width: 100%;
-    padding: 0px 0px 20px 0px;
-}
+/*.effect {*/
+/*    width: 100%;*/
+/*    padding: 0px 0px 20px 0px;*/
+/*}*/
 
 .effect .buttons {
     margin-top: 50px;
@@ -141,10 +141,10 @@ h4 {
     width: 100%;
 }
 
-/*common link styles !!!YOU NEED THEM*/
-.effect {
-    display: flex;
-}
+
+/*.effect {*/
+/*    display: flex;*/
+/*}*/
 
 .effect a {
     text-decoration: none;
@@ -312,6 +312,8 @@ input[type="time" i] {
 /*****************FindRestaurant******************/
 
 #map{
+    border: 1px solid #303b37;
+    border-radius: 15px;
     height: 400px;
     width: 100%;
 }
@@ -546,4 +548,5 @@ input[type="time" i] {
     background-color: lavender;
     border-radius: 5px;
     text-align: center;
+    opacity: 0.8;
 }

@@ -1,17 +1,15 @@
 // const SignUpForm = document.querySelector('#signUp');
 const FullName = document.querySelector('#FName');
-const UserName = document.querySelector('#uname');
-const Email = document.querySelector('#email');
-const Password = document.querySelector('#psw');
-const PasswordRepeat = document.querySelector('#pswRepeat');
-const msg = document.querySelector('.msg');
+let UserName = document.querySelector('#uname');
+let Password = document.querySelector('#psw');
+let PasswordRepeat = document.querySelector('#pswRepeat');
+let msg = document.querySelector('.msg');
 
 
 //SignUp Validation
 const SignUpForm = document.querySelector('#signup')
 SignUpForm.addEventListener('click', (e) => {
     e.preventDefault();
-
 
     if (atLeastOneLetterAndSpace(FullName) === false) {
         msg.innerHTML = 'Please enter full name';
@@ -43,8 +41,7 @@ SignUpForm.addEventListener('click', (e) => {
 })
 
 
-//Check input validation
-
+//Check full name input validation
 function atLeastOneLetterAndSpace(str) {
   return (
     /^[A-Za-z\s]*$/.test(str) &&

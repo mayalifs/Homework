@@ -3,6 +3,7 @@ const Name = document.querySelector('#rname');
 const Street = document.querySelector('#street');
 const City = document.querySelector('#city');
 const GoogleSite = document.querySelector('#site');
+const Phone = document.querySelector('#contactN');
 const msg = document.querySelector('.msg');
 
 
@@ -16,7 +17,7 @@ NewPlaceForm.addEventListener('click', (e) => {
         return false;
     }
     for (let i = 0; i < PlaceList.length(); i++) {
-        if (PlaceList[i].getName() === UName.value) {
+        if (PlaceList[i].getName() === Name.value) {
             msg.innerHTML = 'Restaurant already exists';
             setTimeout(() => msg.remove(), 3000)
             return false;
@@ -24,6 +25,12 @@ NewPlaceForm.addEventListener('click', (e) => {
     }
 
     if (isValidUrl(GoogleSite) === false) {
+        msg.innerHTML = 'Please enter a valid URL';
+        setTimeout(() => msg.remove(), 3000)
+        return false;
+    }
+
+    if (phonenumber(Phone) === false) {
         msg.innerHTML = 'Please enter a valid URL';
         setTimeout(() => msg.remove(), 3000)
         return false;
@@ -42,12 +49,23 @@ NewPlaceForm.addEventListener('click', (e) => {
     }
 })
 
-
+//URL validation
 function isValidUrl(string) {
     try {
         new URL(string);
         return true;
     } catch (err) {
+        return false;
+    }
+}
+
+//Contact number validation
+function phonenumber(inputtxt) {
+    var phoneno = /^\d{10}$/;
+    if (inputtxt.value.match(phoneno)) {
+        return true;
+    } else {
+        alert("message");
         return false;
     }
 }
