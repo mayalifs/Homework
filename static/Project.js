@@ -218,7 +218,7 @@ function initMap() {
     var options = {
         zoom: 8,
         //Latitude and Longitude coordinates of Tel aviv
-        center: {lat: 31.465999, lng: -35.126000}
+        center: {lat: 32.109333, lng: 34.855499}
     }
     //New map
     var map = new google.maps.Map(document.getElementById('map'), options);
@@ -245,7 +245,7 @@ function initAutocomplete(){
             componentRestrictions: {'country': ['IL']},
             fields: ['place_id', 'geometry', 'name']
         });
-    autocomplete.addEventListener('click', onPlaceChanged());
+    autocomplete.addListener('click', onPlaceChanged());
 }
 
 function onPlaceChanged(){
