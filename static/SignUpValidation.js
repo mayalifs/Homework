@@ -34,7 +34,7 @@ SignUpForm.addEventListener('click', (e) => {
         setTimeout(() => msg.remove(), 3000)
         return false;
     } else {
-        alert('You are now signed In');
+        // alert('You are now signed In');
         window.location.href = 'HomePage.html';
     }
 
@@ -43,9 +43,9 @@ SignUpForm.addEventListener('click', (e) => {
 
 //Check full name input validation
 function atLeastOneLetterAndSpace(str) {
-  return (
-    /^[A-Za-z\s]*$/.test(str) &&
-    /[A-Za-z]/.test(str) &&
-    /\s/.test(str)
-  );
+    return (
+        /^[A-Za-z\s]*$/.test(str) &&
+        /[A-Za-z]/.test(str) &&
+        /\s/.test(str)
+    );
 }

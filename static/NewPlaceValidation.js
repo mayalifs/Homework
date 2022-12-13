@@ -10,13 +10,12 @@ const msg = document.querySelector('.msg');
 NewPlaceForm.addEventListener('click', (e) => {
     e.preventDefault();
     if (Name.value === '' || Name.value == null || Street.value === '' || Street.value == null || City.value === '' || City.value == null
-        || GoogleSite.value === '' || GoogleSite.value == null) {
-        toTop();
+        || GoogleSite.value === '' || GoogleSite.value == null || Phone.value === '' || Phone.value == null) {
         msg.innerHTML = 'Please enter all fields';
         setTimeout(() => msg.remove(), 3000)
         return false;
     }
-    for (let i = 0; i < PlaceList.length(); i++) {
+    for (let i = 0; i < PlaceList.length; i++) {
         if (PlaceList[i].getName() === Name.value) {
             msg.innerHTML = 'Restaurant already exists';
             setTimeout(() => msg.remove(), 3000)
@@ -25,47 +24,52 @@ NewPlaceForm.addEventListener('click', (e) => {
     }
 
     if (isValidUrl(GoogleSite) === false) {
+    // if (GoogleSite.value !== UrlPattern.value) {
         msg.innerHTML = 'Please enter a valid URL';
         setTimeout(() => msg.remove(), 3000)
         return false;
     }
 
     if (phonenumber(Phone) === false) {
-        msg.innerHTML = 'Please enter a valid URL';
+    // if (Phone.value !== ContactPattern.value) {
+        msg.innerHTML = 'Please enter a valid phone number';
         setTimeout(() => msg.remove(), 3000)
         return false;
-    } else {
-        let place = 0;
-        for (let i = 0; i < PlaceList.length; i++) {
-            if (PlaceList[i].getUname() === UName.value && PlaceList[i].getPsw() === Psw.value) {
-                alert('You are now signed In');
-                window.location.href = 'HomePage.html';
-                place = 1;
-            }
-            if (place === 0) {
-                alert('User doest exists');
-            }
-        }
     }
+
 })
 
-//URL validation
+// //URL validation
+
+
 function isValidUrl(string) {
-    try {
-        new URL(string);
-        return true;
-    } catch (err) {
-        return false;
-    }
+    var res = string.match('.*\.myco\..*');
+    return (res !== null)
 }
 
-//Contact number validation
-function phonenumber(inputtxt) {
-    var phoneno = /^\d{10}$/;
-    if (inputtxt.value.match(phoneno)) {
-        return true;
-    } else {
-        alert("message");
-        return false;
-    }
+
+function phonenumber(string) {
+    var res = string.match("[0-9]{3}-[0-9]{7} | [0-9]{2}-[0-9]{7}");
+    return (res !== null)
 }
+
+
+// function isValidUrl(string) {
+//     try {
+//         new URL(string);
+//         return true;
+//     } catch (err) {
+//         return false;
+//     }
+// }
+//
+// //Contact number validation
+// function phonenumber(inputtxt) {
+//     var phoneno = /^\d{10}$/;
+//     if (inputtxt.value.match(phoneno)) {
+//         return true;
+//     } else {
+//         alert("message");
+//         return false;
+//     }
+// }

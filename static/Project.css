@@ -76,7 +76,7 @@ h1 {
     font-size: 75px;
 }
 
-/*h2 design - Eat, Drink, Vegan Repeat*/
+/*h2 design - Eat, Drink, Vegan, Repeat*/
 h2 {
     font-size: 25px;
 }
@@ -109,6 +109,7 @@ h4 {
     }
 }
 
+/*Greeting content design*/
 #greeting{
     text-align: center;
     font-size: 20px;
@@ -116,6 +117,7 @@ h4 {
 
 
 /********************Footer*******************/
+
 /*Design the footer items*/
 .footer {
     margin-top: 10%;
@@ -129,16 +131,14 @@ h4 {
     */
 }
 
-/*.effect {*/
-/*    width: 100%;*/
-/*    padding: 0px 0px 20px 0px;*/
-/*}*/
 
+/*Design the social media icons*/
 .effect .buttons {
     margin-top: 50px;
     display: flex;
     justify-content: center;
     width: 100%;
+    padding: 0px 0px 20px 0px;
 }
 
 
@@ -146,10 +146,9 @@ h4 {
 /*    display: flex;*/
 /*}*/
 
+/*Design the size and display of the social media icons*/
 .effect a {
     text-decoration: none;
-    /*color: #fff;
-    */
     width: 60px;
     height: 60px;
     display: flex;
@@ -162,50 +161,51 @@ h4 {
     position: relative;
 }
 
-.effect a i {
-    position: relative;
-    /*z-index: 3;
-    */
-}
+/*.effect a i {*/
+/*    position: relative;*/
+/*    !*z-index: 3;*/
+/*    *!*/
+/*}*/
 
-.effect a.fb {
-    /*background-image: url('facebook.jpeg');
-    */
-    background-color: #3b5998;
-}
+/*.effect a.fb {*/
+/*    !*background-image: url('facebook.jpeg');*!*/
 
-.effect a.insta {
-    /*background-image: url('instagram.jpeg');
-    */
-    background-color: #bc2a8d;
-}
+/*    background-color: #3b5998;*/
+/*}*/
 
-.effect a.in {
-    /*background-image: url('linkedin.jpeg');
-    */
-    background-color: #007bb6;
-}
+/*.effect a.insta {*/
+/*    !*background-image: url('instagram.jpeg');*/
+/*    *!*/
+/*    background-color: #bc2a8d;*/
+/*}*/
 
-/* social effect */
+/*.effect a.in {*/
+/*    !*background-image: url('linkedin.jpeg');*/
+/*    *!*/
+/*    background-color: #007bb6;*/
+/*}*/
+
+/* social media icon effect*/
 .effect.social a {
     transition: transform 0.2s linear 0s, border-radius 0.2s linear 0s;
 }
 
+/* social media icon effect*/
 .effect.social a:hover {
     transform: scale(1.2);
     border-bottom-left-radius: 50%;
     border-top-right-radius: 50%;
 }
 
-.social {
-}
 
-.footer-basic .social {
-    text-align: center;
-    padding-bottom: 25px;
-}
+/*.footer-basic .social {*/
+/*    text-align: center;*/
+/*    padding-bottom: 25px;*/
+/*}*/
 
 /*****************SignIN******************/
+
+/*Design for all input fields*/
 .input {
     width: 100%;
     padding: 12px 20px;
@@ -217,29 +217,28 @@ h4 {
     background-color: lavender;
 }
 
-/*.subconbutton*/
-/*{*/
-/*	color: white;*/
-/*	text-decoration: none;*/
 
-/*}*/
 
 
 /*****************SignUp******************/
+
+/*Design all items to fit the size of the form*/
 * {
-    box-sizing: border-box
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
+/*Design of the line at the start of the form*/
 hr {
     border: 1px solid #f1f1f1;
-    margin-bottom: 25px;
+    margin-bottom: 2vh;
 }
 
 /*Set the forms style*/
 form {
     display: grid;
     align-items: center;
-    /*justify-content: center;*/
     width: 60%;
     margin-left: 20%;
     padding: 16px;
@@ -247,14 +246,13 @@ form {
     font-family: Thonburi;
 }
 
-/* Set a style for all buttons */
+/* Set a style for all buttons*/
 .button {
     display: grid;
     background-color: lavender;
     color: black;
     padding: 12px 20px;
     margin: auto;
-    /*margin: 8px 0;*/
     border: none;
     cursor: pointer;
     width: 25%;
@@ -262,6 +260,7 @@ form {
     border-radius: 15px;
 }
 
+/*Design when mouse is on the button*/
 .button:hover {
     opacity: 1;
 }
@@ -277,12 +276,12 @@ form {
 /*	margin-left: 35%;*/
 /*}*/
 
-/* Clear floats */
-.clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
-}
+/* Clear floats*/
+/*.clearfix::after {*/
+/*    content: "";*/
+/*    clear: both;*/
+/*    display: table;*/
+/*}*/
 
 
 /*****************AddNewPlace******************/
@@ -297,6 +296,7 @@ input[type="time" i] {
     padding: 12px 20px;
 }
 
+/*Design open hours fields*/
 #OpenH {
     display: flex;
     margin: 10px;
@@ -311,6 +311,7 @@ input[type="time" i] {
 
 /*****************FindRestaurant******************/
 
+/*Design the map view*/
 #map{
     border: 1px solid #303b37;
     border-radius: 15px;
@@ -320,6 +321,15 @@ input[type="time" i] {
 
 
 /*****************Rate******************/
+
+/*Design the option fields*/
+.option {
+    width: 25%;
+    padding: 12px 20px;
+    border-radius: 15px;
+    background-color: lavender;
+}
+
 /*All rate options design*/
 .rateAll {
     display: flex;
@@ -327,23 +337,21 @@ input[type="time" i] {
     align-items: flex-start;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-}
 
-.rate {
-    justify-content: space-between;
-    float: left;
-    height: 46px;
-    padding: 0 10px;
-}
+/*.rate {*/
+/*    justify-content: space-between;*/
+/*    float: left;*/
+/*    height: 46px;*/
+/*    padding: 0 10px;*/
+/*}*/
 
+/*Design the stars*/
 .rate:not(:checked) > input {
     position: absolute;
     top: -9999px;
 }
 
+/*Design the radio stars*/
 .rate:not(:checked) > label {
     float: right;
     width: 1em;
@@ -354,14 +362,17 @@ input[type="time" i] {
     color: #ccc;
 }
 
+/*Shows stars instead of numbers*/
 .rate:not(:checked) > label:before {
     content: '★ ';
 }
 
+/*Allow selecting the rating (number of stars)*/
 .rate > input:checked ~ label {
     color: #ffc700;
 }
 
+/*Shows mouse moving on the stars*/
 .rate:not(:checked) > label:hover, .rate:not(:checked) > label:hover ~ label {
     color: #deb217;
 }
@@ -370,124 +381,10 @@ input[type="time" i] {
     color: #c59b08;
 }
 
-/***/
-/*
-{
-	*/
-/* margin: 5px;
-*/
-/* padding: 0;
-*/
-/*}
 
-*/
-/*.radioRate*/
-/*
-{
-	*/
-/* display: grid;
-*/
-/* font-weight: bold;
-*/
-/* !*align-items: end;
-*!*/
-/* justify-content: end;
-*/
-/*}
+/*****************RestaurantsPage******************/
 
-*/
-/*.rate
-{
-	*/
-/* display: flex;
-*/
-/* font-weight: bold;
-*/
-/* align-items: center;
-*/
-/* justify-content: center;
-*/
-/* !*display: flex;
-*!*/
-/* !*justify-items: center;
-*!*/
-/*float: left;
-*/
-/*height: 46px;
-*/
-/*padding: 0 10px;
-*/
-/*}
-
-*/
-/*.rate:not(:checked) > input
-{
-	*/
-/*position:absolute;
-*/
-/*top:-9999px;
-*/
-/*}
-
-*/
-/*.rate:not(:checked) > label
-{
-	*/
-/*float:right;
-*/
-/*width:1em;
-*/
-/*overflow:hidden;
-*/
-/*white-space:nowrap;
-*/
-/*cursor:pointer;
-*/
-/*font-size:30px;
-*/
-/*color:#ccc;
-*/
-/*}
-
-*/
-/*.rate:not(:checked) > label:before
-{
-	*/
-/*content: '★ ';
-*/
-/*}
-
-*/
-/*.rate > input:checked ~ label
-{
-	*/
-/*color: #ffc700;
-*/
-/*}
-
-*/
-/*.rate:not(:checked) > label:hover,*/
-/*.rate:not(:checked) > label:hover ~ label
-{
-	*/
-/*color: #deb217;
-*/
-/*}
-
-*/
-/*.rate > input:checked + label:hover,*/
-/*.rate > input:checked + label:hover ~ label,*/
-/*.rate > input:checked ~ label:hover,*/
-/*.rate > input:checked ~ label:hover ~ label,*/
-/*.rate > label:hover ~ input:checked ~ label
-{
-	*/
-/*color: #c59b08;
-*/
-/*}
-
-*/
-/*****************RestaurantPage******************/
+/*Design of all places*/
 .places {
     display: grid;
     grid-template-columns: repeat(3, 50vh);
@@ -497,6 +394,7 @@ input[type="time" i] {
 
 }
 
+/*Design of each restaurant in the page*/
 .item {
     display: grid;
     background-color: white;
@@ -508,41 +406,30 @@ input[type="time" i] {
     background-color: lavender;
 }
 
+/*Design of the url of each restaurant*/
 .places a {
     color: black;
 }
 
+/*Design of the open hours of each restaurant*/
 .openHours {
     text-align: left;
 }
 
+/*Design of the address of each restaurant*/
 .address {
     text-align: center;
 }
 
+/*Design of the contact number of each restaurant*/
 .contactNumber {
     text-align: center;
 }
 
-/*****************RatePage******************/
-.option {
-    width: 25%;
-    padding: 12px 20px;
-    border-radius: 15px;
-    background-color: lavender;
-}
 
-/*************Active Nav**************/
-/*.activePage
-{
-	*/
-/* color: cadetblue;
-*/
-/*}
+/*************Other******************/
 
-*/
-
-
+/*Design of the messages the user gets*/
 .msg {
     color: crimson;
     background-color: lavender;

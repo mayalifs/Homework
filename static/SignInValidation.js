@@ -21,15 +21,15 @@ SignInForm.addEventListener('click', (e) => {
         let user = 0;
         for (let i = 0; i < UserList.length; i++) {
             if (UserList[i].getUname() === UName.value && UserList[i].getPsw() === Psw.value) {
-                // alert('You are now signed In');
+                // document.SignInForm.UName.focus()
                 window.location.href = 'HomePage.html';
                 user = 1;
             }
         }
         if (user === 0) {
-            // alert('User doest exists');
-            msg.innerHTML = 'User doest exists';
+            msg.innerHTML = 'User doest exists'
             setTimeout(() => msg.remove(), 3000)
+            // window.location.reload()
             return false;
         }
         //Sign in - add new option on nav bar when logged in
