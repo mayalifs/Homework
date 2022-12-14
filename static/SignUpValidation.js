@@ -78,21 +78,18 @@ SignUpForm.addEventListener('click', (e) => {
     if (Password.length < 8) {
         msg.innerHTML = 'Password must be at least 8 characters';
         Password.style.display = "none";
-        // setTimeout(() => msg.remove(), 3000)
         return false;
     }
 
     if (Password.length > 15) {
         msg.innerHTML = 'Password must be less than 15 characters';
         Password.style.display = "none";
-        // setTimeout(() => msg.remove(), 3000)
         return false;
     }
 
     if (PasswordValidation(Password) == false) {
         msg.innerHTML = "Password must contain numbers, upper case, lower case, digits & English letters only";
         Password.style.display = "none";
-        // setTimeout(() => msg.remove(), 3000)
         return false;
     }
 
@@ -100,7 +97,6 @@ SignUpForm.addEventListener('click', (e) => {
         msg.innerHTML = 'Please check that both passwords are the same';
         Password.style.display = "none";
         PasswordRepeat.style.display = "none";
-        // setTimeout(() => msg.remove(), 3000)
         return false;
 
     } else {
