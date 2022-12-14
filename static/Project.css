@@ -110,7 +110,7 @@ h4 {
 }
 
 /*Greeting content design*/
-#greeting{
+#greeting {
     text-align: center;
     font-size: 20px;
 }
@@ -127,8 +127,6 @@ h4 {
     font-size: 14px;
     text-align: center;
     max-height: 20px;
-    /*background-color: #212121;
-    */
 }
 
 
@@ -141,10 +139,6 @@ h4 {
     padding: 0px 0px 20px 0px;
 }
 
-
-/*.effect {*/
-/*    display: flex;*/
-/*}*/
 
 /*Design the size and display of the social media icons*/
 .effect a {
@@ -161,29 +155,6 @@ h4 {
     position: relative;
 }
 
-/*.effect a i {*/
-/*    position: relative;*/
-/*    !*z-index: 3;*/
-/*    *!*/
-/*}*/
-
-/*.effect a.fb {*/
-/*    !*background-image: url('facebook.jpeg');*!*/
-
-/*    background-color: #3b5998;*/
-/*}*/
-
-/*.effect a.insta {*/
-/*    !*background-image: url('instagram.jpeg');*/
-/*    *!*/
-/*    background-color: #bc2a8d;*/
-/*}*/
-
-/*.effect a.in {*/
-/*    !*background-image: url('linkedin.jpeg');*/
-/*    *!*/
-/*    background-color: #007bb6;*/
-/*}*/
 
 /* social media icon effect*/
 .effect.social a {
@@ -198,11 +169,6 @@ h4 {
 }
 
 
-/*.footer-basic .social {*/
-/*    text-align: center;*/
-/*    padding-bottom: 25px;*/
-/*}*/
-
 /*****************SignIN******************/
 
 /*Design for all input fields*/
@@ -216,8 +182,6 @@ h4 {
     border-radius: 15px;
     background-color: lavender;
 }
-
-
 
 
 /*****************SignUp******************/
@@ -266,24 +230,6 @@ form {
 }
 
 
-/*.clearfix*/
-/*{*/
-/*	display: grid;*/
-/*	!*justify-content: center;*!*/
-/*	width: 25%;*/
-/*	color: lavender;*/
-/*	!*margin-right: 250vh;*!*/
-/*	margin-left: 35%;*/
-/*}*/
-
-/* Clear floats*/
-/*.clearfix::after {*/
-/*    content: "";*/
-/*    clear: both;*/
-/*    display: table;*/
-/*}*/
-
-
 /*****************AddNewPlace******************/
 
 input[type="time" i] {
@@ -312,7 +258,7 @@ input[type="time" i] {
 /*****************FindRestaurant******************/
 
 /*Design the map view*/
-#map{
+#map {
     border: 1px solid #303b37;
     border-radius: 15px;
     height: 400px;
@@ -337,13 +283,6 @@ input[type="time" i] {
     align-items: flex-start;
 }
 
-
-/*.rate {*/
-/*    justify-content: space-between;*/
-/*    float: left;*/
-/*    height: 46px;*/
-/*    padding: 0 10px;*/
-/*}*/
 
 /*Design the stars*/
 .rate:not(:checked) > input {

@@ -11,7 +11,7 @@ const SignUpForm = document.querySelector('#signup')
 SignUpForm.addEventListener('click', (e) => {
     e.preventDefault();
 
-    if (atLeastOneLetterAndSpace(FullName) === false) {
+    if (atLeastOneLetterAndSpace(FullName.value) === false) {
         msg.innerHTML = 'Please enter full name';
         setTimeout(() => msg.remove(), 3000)
         return false;
@@ -29,7 +29,7 @@ SignUpForm.addEventListener('click', (e) => {
         return false;
     }
 
-    if (Password !== '' && PasswordRepeat !== '' && Password !== PasswordRepeat) {
+    if (Password.value !== '' && PasswordRepeat.value !== '' && Password.value !== PasswordRepeat.value) {
         msg.innerHTML = 'Please check that both passwords are the same';
         setTimeout(() => msg.remove(), 3000)
         return false;

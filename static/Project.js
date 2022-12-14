@@ -13,7 +13,6 @@ console.log(activePage);
 
 
 //Show password
-
 function showPassword() {
     var x = document.getElementById('psw');
     if (x.type === "password") {
@@ -145,52 +144,9 @@ RateList.push(rate3)
 console.log(RateList);
 
 
-// document.getElementById(signin).addEventListener('click', showNewMenuOption)
 
-
-//GeoLocation
-
-
-// function GetLocation() {
-//     console.log(navigator.geolocation);
-//     if (navigator.geolocation) {
-//         console.log("in get location");
-//         navigator.geolocation.getCurrentPosition(showPosition);
-//     } else {
-//         document.getElementById("places").innerHTML = "Geo;location is not supported";
-//     }
-// };
-//
-// function showPosition(position) {
-//     var x = document.getElementById("places");
-//     var y = document.getElementById("search");
-//     x.innerHTML = "Latitude: " + position.coords.latitude
-//     + "longtitide: " + position.coords. longitude;
-// }
-
-
-//Greeting according to the time
-
-const greeting = document.getElementById("greeting");
-const hour = new Date().getHours();
-const welcomeTypes = ["Good Morning :)", "Good Afternoon :)", "Good Evening :)"];
-let welcomeText = "";
-
-if (hour < 12) welcomeText = welcomeTypes[0];
-else if (hour < 18) welcomeText = welcomeTypes[1];
-else welcomeText = welcomeTypes[2];
-
-greeting.innerHTML = welcomeText;
-
-
-//Filter places by location
-const filterPlaces = PlaceList.filter(place => {
-    return place.getCity();
-})
-
-
-//Get to the top of the page
-const toTop = () => window.scrollTo({top: 0, behavior: 'smooth'});
+// //Get to the top of the page
+// const toTop = () => window.scrollTo({top: 0, behavior: 'smooth'});
 
 
 //Initial map
@@ -217,7 +173,6 @@ function initMap() {
             map: map
         });
     }
-
 
 }
 
@@ -256,30 +211,65 @@ function topFunction() {
 
 
 
+//Greeting according to the time
 
-// Add a new place - if closed remove time option
-const closedCheckBox = document.querySelector('#closed')
+const greeting = document.getElementById("greeting");
+const hour = new Date().getHours();
+const welcomeTypes = ["Good Morning :)", "Good Afternoon :)", "Good Evening :)"];
+let welcomeText = "";
 
-closedCheckBox.addEventListener('click', (e) => {
-    let saturday = document.querySelectorAll('.saturday');
-    if (closedCheckBox.checked === true) {
-        removeTimeInput(saturday)
-    } else {
-        showTimeInput(saturday)
-    }
+if (hour < 12) welcomeText = welcomeTypes[0];
+else if (hour < 18) welcomeText = welcomeTypes[1];
+else welcomeText = welcomeTypes[2];
+
+greeting.innerHTML = welcomeText;
+
+
+// function MyGreeting() {
+//     console.log("im in my greeting");
+//     var d = new Date;
+//     var t = d.getUTCHours();
+//     if (t < 12) {
+//         document.getElementById("demo").innerHTML = "Good Morning :)";
+//     } else if (t < 18) {
+//         document.getElementById("demo").innerHTML = "Good Afternoon :)";
+//     } else {
+//         document.getElementById("demo").innerHTML = "Good Evening :)"
+//     };
+// };
+
+
+//Filter places by location
+const filterPlaces = PlaceList.filter(place => {
+    return place.getCity();
 })
 
-const removeTimeInput = (className) => {
-    for (let i = 0; i < className.length; i++) {
-        className[i].style.display = "none";
 
-    }
-}
-const showTimeInput = (className) => {
-    for (let i = 0; i < className.length; i++) {
-        className[i].style.display = "block";
-    }
-}
+
+
+// // Add a new place - if closed remove time option
+// const closedCheckBox = document.querySelector('#closed')
+//
+// closedCheckBox.addEventListener('click', (e) => {
+//     let saturday = document.querySelectorAll('.saturday');
+//     if (closedCheckBox.checked === true) {
+//         removeTimeInput(saturday)
+//     } else {
+//         showTimeInput(saturday)
+//     }
+// })
+//
+// const removeTimeInput = (className) => {
+//     for (let i = 0; i < className.length; i++) {
+//         className[i].style.display = "none";
+//
+//     }
+// }
+// const showTimeInput = (className) => {
+//     for (let i = 0; i < className.length; i++) {
+//         className[i].style.display = "block";
+//     }
+// }
 
 
 

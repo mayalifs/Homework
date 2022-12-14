@@ -23,15 +23,13 @@ NewPlaceForm.addEventListener('click', (e) => {
         }
     }
 
-    if (isValidUrl(GoogleSite) === false) {
-    // if (GoogleSite.value !== UrlPattern.value) {
+    if (!GoogleSite.value) {
         msg.innerHTML = 'Please enter a valid URL';
         setTimeout(() => msg.remove(), 3000)
         return false;
     }
 
-    if (phonenumber(Phone) === false) {
-    // if (Phone.value !== ContactPattern.value) {
+    if (!Phone.value) {
         msg.innerHTML = 'Please enter a valid phone number';
         setTimeout(() => msg.remove(), 3000)
         return false;
@@ -39,37 +37,30 @@ NewPlaceForm.addEventListener('click', (e) => {
 
 })
 
-// //URL validation
 
 
-function isValidUrl(string) {
-    var res = string.match('.*\.myco\..*');
-    return (res !== null)
+
+
+// Add a new place - if closed remove time option
+const closedCheckBox = document.querySelector('#closed')
+
+closedCheckBox.addEventListener('click', (e) => {
+    let saturday = document.querySelectorAll('.saturday');
+    if (closedCheckBox.checked === true) {
+        removeTimeInput(saturday)
+    } else {
+        showTimeInput(saturday)
+    }
+})
+
+const removeTimeInput = (className) => {
+    for (let i = 0; i < className.length; i++) {
+        className[i].style.display = "none";
+
+    }
 }
-
-
-function phonenumber(string) {
-    var res = string.match("[0-9]{3}-[0-9]{7} | [0-9]{2}-[0-9]{7}");
-    return (res !== null)
+const showTimeInput = (className) => {
+    for (let i = 0; i < className.length; i++) {
+        className[i].style.display = "block";
+    }
 }
-
-
-// function isValidUrl(string) {
-//     try {
-//         new URL(string);
-//         return true;
-//     } catch (err) {
-//         return false;
-//     }
-// }
-//
-// //Contact number validation
-// function phonenumber(inputtxt) {
-//     var phoneno = /^\d{10}$/;
-//     if (inputtxt.value.match(phoneno)) {
-//         return true;
-//     } else {
-//         alert("message");
-//         return false;
-//     }
-// }
