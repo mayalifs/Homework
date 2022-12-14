@@ -133,7 +133,8 @@ function UrlValidation(url) {
 
 function PhoneValidation(phone) {
     // if (/^0\d([\d]{0,1})([-]{0,1})\d{7}$/.test(phone)) //regex to check if valid phone
-    if (/^05\d([-]{0,1})\d{7}$/.test(phone) || /^0\d([\d]{0,1})([-]{0,1})\d{7}$/.test(phone))
+    // if (/^05\d([-]{0,1})\d{7}$/.test(phone) || /^0\d([\d]{0,1})([-]{0,1})\d{7}$/.test(phone))
+    if(/^\+?(972\-?)?0?(([23489]{1}\-?\d{7})|[5]{1}\d{1}\-?\d{7})$/.test(phone))
     {
         return true;
     }
