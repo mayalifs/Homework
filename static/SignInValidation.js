@@ -1,11 +1,5 @@
-const SignInForm = document.querySelector('#signin');
-// const UName = document.querySelector('#uname');
-// const Psw = document.querySelector('#psw');
-// const msg = document.querySelector('.msg');
-
-
 //SignIn Validation
-// let SignInForm = document.querySelector('#signin');
+const SignInForm = document.querySelector('#signin');
 SignInForm.addEventListener('click', (e) => {
     e.preventDefault();
     let UName = document.querySelector('#uname');

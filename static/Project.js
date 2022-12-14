@@ -9,7 +9,7 @@ const activePage = document.querySelectorAll("nav a").forEach(
         }
     }
 );
-console.log(activePage);
+// console.log(activePage);
 
 
 //Show password
@@ -22,11 +22,14 @@ function showPassword() {
     }
 }
 
+//****************Objects and classes*******************
+
 //Class Place
 class Places {
-    constructor(name, street, city, googleSite, openHours, contact) {
+    constructor(name, street, sNumber, city, googleSite, openHours, contact) {
         this.name = name;
         this.street = street;
+        this.sNumber = sNumber;
         this.city = city;
         this.googleSite = googleSite;
         this.openHours = new OpenH(openHours);
@@ -45,12 +48,12 @@ class Places {
 
 const PlaceList = [];
 
-const place1 = new Places('Anastasia', 'Frishman 54', 'Tel Aviv', 'https://www.anastasiatlv.co.il/',
+const place1 = new Places('Anastasia', 'Frishman', '54', 'Tel Aviv', 'https://www.anastasiatlv.co.il/',
     new OpenH('8am-10pm', '8am-2pm', '9am-8pm'), '03-5290095');
-const place2 = new Places('Meshek Barzilay', 'Ahad Haam 6', 'Tel Aviv', 'https://www.meshekbarzilay.co.il/',
+const place2 = new Places('Meshek Barzilay', 'Ahad Haam', '6', 'Tel Aviv', 'https://www.meshekbarzilay.co.il/',
     new OpenH('8am-10pm', '8am-2pm', 'Closed'),
     '03-5166329');
-const place3 = new Places('Goodness', 'King George 41', 'Tel Aviv', 'https://www.goodness.co.il/',
+const place3 = new Places('Goodness', 'King George', '41', 'Tel Aviv', 'https://www.goodness.co.il/',
     new OpenH('12am-10pm', '12am-4pm', '12pm-8pm'),
     '055-973-5792');
 
@@ -60,18 +63,6 @@ PlaceList.push(place3);
 
 console.log(PlaceList);
 
-//
-// let addPlace = document.querySelector("addPlace");
-// addPlace.onsubmit = function () {
-//     let rname = document.getElementById("rname").value
-//     let street = document.getElementById("street").value;
-//     let city = document.getElementById("city").value;
-//     let googleSite = document.getElementById("googleSite").value
-//     let contact = document.getElementById("contact").value
-//
-//     const newPlace = new Places(rname, street, city, googleSite, contact)
-//     PlaceList.push(newPlace)
-// }
 
 
 // function OpenH(SunTillThur, friday, saturday)
@@ -85,6 +76,9 @@ function OpenH(openHst, closeHst, openHf, closeHf, openHs, closeHs) {
     this.saturday = `Saturday: ${openHs} + ${closeHs}`;
 }
 
+console.log(place1);
+console.log(place2);
+console.log(place3);
 
 //Class User
 class User {
@@ -143,11 +137,7 @@ RateList.push(rate3)
 
 console.log(RateList);
 
-
-
-// //Get to the top of the page
-// const toTop = () => window.scrollTo({top: 0, behavior: 'smooth'});
-
+//****************Functions*******************
 
 //Initial map
 function initMap() {

@@ -1,13 +1,5 @@
-const SignUpForm = document.querySelector('#signup');
-// let FullName = document.querySelector('#FName');
-// let UserName = document.querySelector('#uname');
-// let Password = document.querySelector('#psw');
-// let PasswordRepeat = document.querySelector('#pswRepeat');
-// let msg = document.querySelector('.msg');
-
-
 //SignUp Validation
-// const SignUpForm = document.querySelector('#signup')
+const SignUpForm = document.querySelector('#signup');
 SignUpForm.addEventListener('click', (e) => {
     e.preventDefault();
     let FirstName = document.querySelector('#fName').value;
