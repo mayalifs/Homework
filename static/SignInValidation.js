@@ -11,9 +11,12 @@ SignInForm.addEventListener('click', (e) => {
     let UName = document.querySelector('#uname');
     let Psw = document.querySelector('#psw');
     let msg = document.querySelector('.msg');
+
     if (UName.value === '' || UName.value == null || Psw.value === '' || Psw.value == null) {
         msg.innerHTML = 'Please enter all fields';
-        setTimeout(() => msg.remove(), 3000)
+        // UName.style.display = "none";
+        // Psw.style.display = "none";
+        // setTimeout(() => msg.remove(), 3000)
         return false;
     }
 
@@ -27,9 +30,9 @@ SignInForm.addEventListener('click', (e) => {
             }
         }
         if (user === 0) {
-            msg.innerHTML = 'User doest exists'
-            setTimeout(() => msg.remove(), 3000)
-            // window.location.reload()
+            msg.innerHTML = 'User doest exists';
+            // UName.style.display = "none";
+            // setTimeout(() => msg.remove(), 3000)
             return false;
         }
         //Sign in - add new option on nav bar when logged in

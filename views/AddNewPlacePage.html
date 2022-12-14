@@ -42,8 +42,10 @@
     <div class="msg"></div>
     <label for="rname"><b>Name</b></label>
     <input class="input" type="text" placeholder="Enter place name" name="rnam" id="rname" required>
-    <label for="street"><b>Street</b></label>
-    <input class="input" type="text" placeholder="Enter street number" name="street" id="street" required>
+    <label for="streetName"><b>Street name</b></label>
+    <input class="input" type="text" placeholder="Enter street name" name="street" id="streetName" required>
+    <label for="streetNumber"><b>Street number</b></label>
+    <input class="input" type="text" placeholder="Enter street number" name="street" id="streetNumber" required>
     <label for="city"><b>City</b></label>
     <div id="DropDown">
     <select class="input" type="text" placeholder="Select city" name="city" id="city" required>
@@ -60,7 +62,7 @@
     </div>
 
     <label for="site"><b>Google site</b></label>
-    <input class="input" type="url" placeholder="https://vdine.com/" name="site" id="site" pattern=".*\.myco\..*" size="30" required>
+    <input class="input" type="url" placeholder="https://vdine.com/" name="site" id="site" size="30" required>
     <!--            <label for="openH"><b>Open hours</b></label>-->
     <!--            <input class="input" type="password" placeholder="Enter open hours" name="openH" id="openH" required>-->
     <label><b>Open hours</b></label>
@@ -78,7 +80,7 @@
 
     </div>
     <label for="contactN"><b>Contact number</b></label>
-    <input class="input" type="tel" placeholder="000-0000000" name="contactN" id="contactN" pattern="[0-9]{3}-[0-9]{7} | [0-9]{2}-[0-9]{7}" size="10" required>
+    <input class="input" type="tel" placeholder="000-0000000 / 00-0000000" name="contactN" id="contactN" size="10" required>
     <br>
     <div>
         <a href="Restaurants.html"><input class="button" type="submit" value="Add" id="add" onclick="topFunction()"></input></a>
