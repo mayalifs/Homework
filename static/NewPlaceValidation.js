@@ -64,6 +64,8 @@ NewPlaceForm.addEventListener('click', (e) => {
         msg.innerHTML = 'Please enter a valid phone number';
         Phone.style.display = "none";
         return false;
+    } else {
+        window.location.href = 'HomePage.html';
     }
 
 })
@@ -96,8 +98,7 @@ function UrlValidation(url) {
 
 
 function PhoneValidation(phone) {
-    if (/^0(5[^7]|[2-4]|[8-9]|7[0-9])[0-9]{7}$/.test(phone))
-    // if (/^\+?(972\-?)?0?(([23489]{1}\-?\d{7})|[5]{1}\d{1}\-?\d{7})$/.test(phone))//regex to check if valid phone
+    if (/^\+?(972\-?)?0?(([23489]{1}\-?\d{7})|[5]{1}\d{1}\-?\d{7})$/.test(phone)) //regex to check if valid phone
     {
         return true;
     }

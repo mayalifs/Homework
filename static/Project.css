@@ -1,7 +1,7 @@
 /*All pages style*/
 .body {
-    /*display: flex;*/
-    /*flex-direction: column;*/
+    display: flex;
+    flex-direction: column;
     background-image: url('FoodBackround.jpg');
     background-size: cover;
     background-position: center;
@@ -266,6 +266,50 @@ input[type="time" i] {
 }
 
 
+/*Design of all places*/
+.places {
+    display: grid;
+    grid-template-columns: repeat(3, 50vh);
+    grid-auto-rows: 50vh;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+/*Design of each restaurant in the page*/
+.item {
+    display: grid;
+    background-color: white;
+    color: black;
+    padding: 5vh;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 15px;
+    background-color: lavender;
+}
+
+/*Design of the url of each restaurant*/
+.places a {
+    color: black;
+}
+
+/*Design of the open hours of each restaurant*/
+.openHours {
+    text-align: left;
+}
+
+/*Design of the address of each restaurant*/
+.address {
+    text-align: center;
+}
+
+/*Design of the contact number of each restaurant*/
+.contactNumber {
+    text-align: center;
+}
+
+
+
 /*****************Rate******************/
 
 /*Design the option fields*/
@@ -320,63 +364,6 @@ input[type="time" i] {
     color: #c59b08;
 }
 
-
-/*****************RestaurantsPage******************/
-
-/*Design of all places*/
-.places {
-    display: grid;
-    grid-template-columns: repeat(3, 50vh);
-    grid-auto-rows: 50vh;
-    align-items: center;
-    justify-content: space-around;
-
-}
-
-/*Design of each restaurant in the page*/
-.item {
-    display: grid;
-    background-color: white;
-    color: black;
-    padding: 5vh;
-    font-size: 16px;
-    text-align: center;
-    border-radius: 15px;
-    background-color: lavender;
-}
-
-/*Design of the url of each restaurant*/
-.places a {
-    color: black;
-}
-
-/*Design of the open hours of each restaurant*/
-.openHours {
-    text-align: left;
-}
-
-/*Design of the address of each restaurant*/
-.address {
-    text-align: center;
-}
-
-/*Design of the contact number of each restaurant*/
-.contactNumber {
-    text-align: center;
-}
-
-#WhereToEatDropDown{
-    display: grid;
-    color: black;
-    margin: auto;
-    width: 25%;
-    border-radius: 15px;
-}
-
-#chooseCityToEat{
-    display: grid;
-    text-align: center;
-}
 
 
 /*************Other******************/

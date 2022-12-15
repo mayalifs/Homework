@@ -8,13 +8,10 @@ SignInForm.addEventListener('click', (e) => {
 
     if (UName.value === '' || UName.value == null || Psw.value === '' || Psw.value == null) {
         msg.innerHTML = 'Please enter all fields';
-        // UName.style.display = "none";
-        // Psw.style.display = "none";
-        // setTimeout(() => msg.remove(), 3000)
+        setTimeout(() => msg.remove(), 3000)
+        setTimeout(() => window.location.href = '../views/SignInPage.html', 1000)
         return false;
-    }
-
-    else {
+    } else {
         let user = 0;
         for (let i = 0; i < UserList.length; i++) {
             if (UserList[i].getUname() === UName.value && UserList[i].getPsw() === Psw.value) {
@@ -25,39 +22,12 @@ SignInForm.addEventListener('click', (e) => {
         }
         if (user === 0) {
             msg.innerHTML = 'User doest exists';
-            // UName.style.display = "none";
-            // setTimeout(() => msg.remove(), 3000)
+            setTimeout(() => msg.remove(), 3000)
+            setTimeout(() => window.location.href = '../views/SignInPage.html', 1000)
             return false;
         }
-        //Sign in - add new option on nav bar when logged in
-
-        // const addMenuOption = document.querySelector('#signin')
-        // addMenuOption.addEventListener('click', (e) => {
-        //     let addToMenu = document.querySelectorAll('.addToMenu');
-        //     if (user === 1) {
-        //         showNewMenuOption(addToMenu)
-        //     } else {
-        //         removeNewMenuOption(addToMenu)
-        //     }
-        // })
-        // const removeNewMenuOption = (className) => {
-        //     for (let i = 0; i < className.length; i++) {
-        //         className[i].style.display = "none";
-        //
-        //     }
-        //
-        // }
-        // const showNewMenuOption = (className) => {
-        //     for (let i = 0; i < className.length; i++) {
-        //         className[i].style.display = "block";
-        //     }
-        //
-        // }
 
     }
 
 })
 
-// function Reset(){
-//       window.location.reload();
-//     }

@@ -9,60 +9,54 @@ SignUpForm.addEventListener('click', (e) => {
     let Password = document.querySelector('#psw').value;
     let PasswordRepeat = document.querySelector('#pswRepeat').value;
     let msg = document.querySelector('.msg');
-    console.log(FirstName)
-    console.log(LastName)
-    console.log(UserName)
-    console.log(Email)
-    console.log(Password)
-    console.log(PasswordRepeat)
 
 
     if (NameValidation(FirstName) == false) {
-        msg.innerHTML = "Invalid first name, please type again in English only";
+        msg.innerHTML = 'Invalid first name, please type again in English only';
         FirstName.style.display = "none";
         return false;
     }
 
-    if (FirstName.length < 2) {
-        msg.innerHTML = "First name must be at least 3 characters";
+    if (FirstName.length < 3) {
+        msg.innerHTML = 'First name must be at least 3 characters';
         FirstName.style.display = "none";
         return false;
     }
 
     if (NameValidation(LastName) == false) {
-        msg.innerHTML = "Invalid last name, please type again in English only";
+        msg.innerHTML = 'Invalid last name, please type again in English only';
         LastName.style.display = "none";
         return false;
     }
 
-    if (LastName.length < 2) {
-        msg.innerHTML = "Last name must be at least 3 characters";
+    if (LastName.length < 3) {
+        msg.innerHTML = 'Last name must be at least 3 characters';
         LastName.style.display = "none";
         return false;
     }
 
     if (NameValidation(UserName) == false) {
-        msg.innerHTML = "Invalid user name, please type again in English only";
+        msg.innerHTML = 'Invalid user name, please type again in English only';
         UserName.style.display = "none";
         return false;
     }
 
     if (UserName.length < 4) {
-        msg.innerHTML = "User name must be at least 5 characters";
+        msg.innerHTML = 'User name must be at least 5 characters';
         UserName.style.display = "none";
         return false;
     }
 
     for (let i = 0; i < UserList.length; i++) {
         if (UserList[i].getUname() === UserName) {
-            msg.innerHTML = "User name is already taken, please try a different one";
+            msg.innerHTML = 'User name is already taken, please try a different one';
             UserName.style.display = "none";
             return false;
         }
     }
 
     if (EmailValidation(Email) == false) {
-        msg.innerHTML = "Invalid email address";
+        msg.innerHTML = 'Invalid email address';
         Email.style.display = "none";
         return false;
     }
@@ -80,7 +74,7 @@ SignUpForm.addEventListener('click', (e) => {
     }
 
     if (PasswordValidation(Password) == false) {
-        msg.innerHTML = "Password must contain numbers, upper case, lower case, digits & English letters only";
+        msg.innerHTML = 'Password must contain at least one uppercase letter, one lowercase letter and one number';
         Password.style.display = "none";
         return false;
     }
@@ -107,7 +101,7 @@ function EmailValidation(mail) {
 }
 
 function NameValidation(name) {
-    if (/(?=.*\d)/g) //regex to check if valid name
+    if (/^[a-z]+$/i.test(name)) //regex to check if valid name
     {
         return true;
     }
@@ -115,7 +109,8 @@ function NameValidation(name) {
 }
 
 function PasswordValidation(password) {
-    if ((/^[a-zA-Z]*$/) && (/^[a-zA-Z0-9]*$/) && (/^[a-zA-Z0-9]*$/)) //regex to check if valid password
+    // if ((/^[a-zA-Z]*$/).test(password) && (/^[a-zA-Z0-9]*$/).test(password)&& (/^[a-zA-Z0-9]*$/).test(password)) //regex to check if valid password
+    if (/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/.test(password))
     {
         return true;
     }

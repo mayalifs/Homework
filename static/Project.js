@@ -203,30 +203,30 @@ function topFunction() {
 
 //Greeting according to the time
 
-const greeting = document.getElementById("greeting");
-const hour = new Date().getHours();
-const welcomeTypes = ["Good Morning :)", "Good Afternoon :)", "Good Evening :)"];
-let welcomeText = "";
+// const greeting = document.getElementById("greeting");
+// const hour = new Date().getHours();
+// const welcomeTypes = ["Good Morning :)", "Good Afternoon :)", "Good Evening :)"];
+// let welcomeText = "";
+//
+// if (hour < 12) welcomeText = welcomeTypes[0];
+// else if (hour < 18) welcomeText = welcomeTypes[1];
+// else welcomeText = welcomeTypes[2];
+//
+// greeting.innerHTML = welcomeText;
 
-if (hour < 12) welcomeText = welcomeTypes[0];
-else if (hour < 18) welcomeText = welcomeTypes[1];
-else welcomeText = welcomeTypes[2];
 
-greeting.innerHTML = welcomeText;
-
-
-// function MyGreeting() {
-//     console.log("im in my greeting");
-//     var d = new Date;
-//     var t = d.getUTCHours();
-//     if (t < 12) {
-//         document.getElementById("demo").innerHTML = "Good Morning :)";
-//     } else if (t < 18) {
-//         document.getElementById("demo").innerHTML = "Good Afternoon :)";
-//     } else {
-//         document.getElementById("demo").innerHTML = "Good Evening :)"
-//     };
-// };
+function MyGreeting() {
+    // console.log("im in my greeting");
+    var d = new Date;
+    var t = d.getUTCHours();
+    if (t < 12) {
+        document.getElementById("greeting").innerHTML = "Good Morning :)";
+    } else if (t < 18) {
+        document.getElementById("greeting").innerHTML = "Good Afternoon :)";
+    } else {
+        document.getElementById("greeting").innerHTML = "Good Evening :)"
+    };
+};
 
 
 //Filter places by location
@@ -260,6 +260,11 @@ const filterPlaces = PlaceList.filter(place => {
 //         className[i].style.display = "block";
 //     }
 // }
-
-
-
+//
+// const FindAPlace = document.querySelector('#search');
+// SignUpForm.addEventListener('click', (e) => {
+//     e.preventDefault();
+//     let Restaurant = document.querySelector('.places').value;
+//     Restaurant.style.display = 'block';
+//
+// })

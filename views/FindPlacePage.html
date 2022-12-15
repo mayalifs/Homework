@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Find a Place</title>
@@ -14,7 +14,6 @@
     <ul>
         <li><a href="HomePage.html">Home Page</a></li>
         <li><a href="FindPlacePage.html">Where to eat</a></li>
-        <li><a href="Restaurants.html">Restaurants</a></li>
         <li><a href="SignInPage.html">Sign In</a></li>
         <li><a href="SignUpPage.html">Sign Up</a></li>
         <li><a class="addToMenu" href="AddNewPlacePage.html">Add a new place</a></li>
@@ -32,30 +31,16 @@
         Please fill in this form to find the place to eat there :)
     </p>
     <hr>
-    <!--    <label for="cname"><b>City and State</b></label>-->
-    <!--    <div id="PlacesDropDown">-->
-    <!--        <select class="input" name="places" id="autocomplete"  type="text" required></select>-->
-    <!--    </div>-->
 
 
-    <label for="cname"><b>Search for a city</b></label>
-<!--    <div id="DropDown">-->
-<!--        <select class="input" name="places" id="places" required>-->
-<!--            <option value="Haifa">Haifa, Israel</option>-->
-<!--            <option value="TelAviv">Tel Aviv, Israel</option>-->
-<!--            <option value="Modiin">Modi'in, Israel</option>-->
-<!--            <option value="BeerSheva">Beer Sheva, Israel</option>-->
-<!--            <option value="RamatGan">Ramat Gan, Israel</option>-->
-<!--            <option value="Jerusalem">Jerusalem, Israel</option>-->
-<!--            <option value="Eilat">Eilat, Israel</option>-->
-<!--        </select>-->
-<!--    </div>-->
+    <label><b>Search for a city</b></label>
+
 
     <input class="input" id="autocomplete" placeholder="Enter a place" type="text" onclick="initAutocomplete()">
     <div id="map"></div>
     <br>
     <div>
-        <a href="Restaurants.html"><input class="button" type="submit" value="Search" id="search"></input></a>
+        <a href="HomePage.html"><input class="button" type="submit" value="Search" id="search"></input></a>
     </div>
 
 </form>
