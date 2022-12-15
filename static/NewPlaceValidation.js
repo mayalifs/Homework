@@ -13,14 +13,12 @@ NewPlaceForm.addEventListener('click', (e) => {
     if (NameValidation(RName) == false) {
         msg.innerHTML = "Invalid restaurant name, please type again in English only";
         RName.style.display = "none";
-        // DisplayNone(RName);
         return false;
     }
 
     if (RName.length < 3) {
         msg.innerHTML = "Restaurant name must be at least 3 characters";
         RName.style.display = "none";
-        // DisplayNone(RName);
         return false;
     }
 
@@ -28,7 +26,6 @@ NewPlaceForm.addEventListener('click', (e) => {
         if (PlaceList[i].getName() === RName) {
             msg.innerHTML = 'Restaurant already exists';
             RName.style.display = "none";
-            // DisplayNone(RName);
             return false;
         }
     }
@@ -36,42 +33,36 @@ NewPlaceForm.addEventListener('click', (e) => {
     if (NameValidation(StreetName) == false) {
         msg.innerHTML = "Invalid street name, please type again in English only";
         StreetName.style.display = "none";
-        // DisplayNone(StreetName);
         return false;
     }
 
     if (StreetName.length < 3) {
         msg.innerHTML = "Street name must be at least 3 characters";
         StreetName.style.display = "none";
-        // DisplayNone(StreetName);
         return false;
     }
 
     if (StreetNumValidation(StreetNumber) == false) {
         msg.innerHTML = "Invalid street number, please type again in numbers only";
         StreetNumber.style.display = "none";
-        // DisplayNone(StreetNumber);
         return false;
     }
 
     if (StreetNumber.length > 3) {
         msg.innerHTML = "Street number must be maximum 3 numbers";
         StreetNumber.style.display = "none";
-        // DisplayNone(StreetNumber);
         return false;
     }
 
     if (UrlValidation(GoogleSite) == false) {
         msg.innerHTML = 'Please enter a valid URL';
         GoogleSite.style.display = "none";
-        // DisplayNone(GoogleSite);
         return false;
     }
 
     if (PhoneValidation(Phone) == false) {
         msg.innerHTML = 'Please enter a valid phone number';
         Phone.style.display = "none";
-        // DisplayNone(Phone);
         return false;
     }
 
@@ -97,7 +88,6 @@ function StreetNumValidation(number) {
 
 function UrlValidation(url) {
     if (/^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$/.test(url)) //regex to check if valid url
-        // if (/(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g)
     {
         return true;
     }
@@ -106,7 +96,8 @@ function UrlValidation(url) {
 
 
 function PhoneValidation(phone) {
-    if (/^\+?(972\-?)?0?(([23489]{1}\-?\d{7})|[5]{1}\d{1}\-?\d{7})$/.test(phone))//regex to check if valid phone
+    if (/^0(5[^7]|[2-4]|[8-9]|7[0-9])[0-9]{7}$/.test(phone))
+    // if (/^\+?(972\-?)?0?(([23489]{1}\-?\d{7})|[5]{1}\d{1}\-?\d{7})$/.test(phone))//regex to check if valid phone
     {
         return true;
     }

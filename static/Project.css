@@ -365,6 +365,19 @@ input[type="time" i] {
     text-align: center;
 }
 
+#WhereToEatDropDown{
+    display: grid;
+    color: black;
+    margin: auto;
+    width: 25%;
+    border-radius: 15px;
+}
+
+#chooseCityToEat{
+    display: grid;
+    text-align: center;
+}
+
 
 /*************Other******************/
 
